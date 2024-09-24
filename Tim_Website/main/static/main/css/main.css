@@ -117,7 +117,7 @@ body {
 
     .scroll_down {
         position: fixed;
-        bottom: 3.3rem;
+        bottom: 3rem;
         left: 50%; /* Центрирование по оси X */
         transform: translateX(-50%); /* Сдвиг для точного центрирования */
     }
@@ -496,6 +496,7 @@ body {
           z-index: 100;
           opacity: 0;
           transition: opacity 0.5s ease, visibility 0.5s ease;
+          bottom: 0;
         }
 
 
