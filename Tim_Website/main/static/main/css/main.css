@@ -7,8 +7,7 @@ body {
 }
 
 
-
-@media (min-width: 993px){
+@media (min-width: 1563px) {
     .bg_space {
         position: absolute; /* Изменено на absolute */
         top: 0;
@@ -22,230 +21,396 @@ body {
     .icon {
         display: flex;
         justify-content: start;
-        width: 30rem;
-        height: 30rem;
+        width: 5rem;
+        height: 5rem;
         overflow: hidden; /* Чтобы иконка не выходила за рамки */
         margin-top: 1rem;
-        margin-left: 5rem;
+        margin-left: 0.6rem;
+    }
+
+    .hamburger-menu {
+        display: None;
     }
 
     .header_buttons {
-        position: absolute;
-        top: 10rem; /* Расположить блок кнопок сверху */
-        right: 10rem; /* Расположить справа */
         display: flex;
-        gap: 5rem; /* Отступы между кнопками */
-        max-width: 35%;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-right: 2%;
+        margin-top: -4rem;
+        position: relative;
+        gap: 1rem;
+        max-width: 100%;
     }
 
     .header_buttons button {
         background-color: transparent;
         border: 0.125rem solid white;
         color: white;
-        padding: 2rem 4rem;
+        padding: 1.2rem 2rem;
         cursor: pointer;
         transition: background-color 0.3s;
         display: flex;
-        align-items: center; /* Выравнивание текста по вертикали */
-        justify-content: center; /* Выравнивание текста по горизонтали */
-        width: 30rem; /* Адаптивная ширина кнопок */
-        height: 9rem; /* Адаптивная высота кнопок */
-        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        height: 1rem;
+        font-size: 0.7rem;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
+        flex-basis: 8%;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
+
 
     .header_buttons .tai_but {
         border: 0.125rem solid #9b1f1f;
         color: white;
     }
 
+
     .text-wrapper {
-        margin-left: 60rem;
-        margin-top: 70rem;
+        position: fixed;
+        max-width: 100%;
+        margin-left: 7rem;
+        margin-top: 14rem;
+        margin-right: 2rem; /* Добавляем отступ справа */
+        word-wrap: break-word; /* Переносим слова при необходимости */
     }
 
     .text-wrapper h5 {
-        font-size: 5rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
-        letter-spacing: 0.125rem;
+        letter-spacing: 0.2rem;
         color: #9b1f1f; /* Красный цвет текста */
         position: relative;
         display: inline-block;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
+        padding-top: 0.5rem;
     }
 
     .red-line {
         display: inline-block;
-        width: 10rem;
-        height: 0.5rem;
+        width: 3rem;
+        height: 0.2rem;
         background-color: #9b1f1f;
-        margin-right: 3rem;
+        margin-right: 0.3rem;
         vertical-align: middle;
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.1rem;
     }
 
     /* Главный заголовок */
     .text-wrapper h1 {
-        font-size: 10rem;
+        font-size: 1.9rem;
         line-height: 1.5;
+        letter-spacing: 0.1rem;
         color: #d5d5d5;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
+        max-width: 100%; /* Ограничиваем ширину */
+        word-wrap: break-word; /* Переносим слова, если они не помещаются */
+        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
     }
 
 
     .scroll_down {
-        margin-left: 380rem;
-        margin-top: 77rem;
+        position: fixed;
+        bottom: 3.3rem;
+        left: 50%; /* Центрирование по оси X */
+        transform: translateX(-50%); /* Сдвиг для точного центрирования */
     }
 
     .scroll_down button{
         background: None;
-        font-size: 4.3rem;
+        font-size: 1rem;
         border: None;
         letter-spacing: 0.125rem;
         position: relative;
         display: inline-block;
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.2rem;
         color: #d5d5d5;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
     }
     .scroll_down i {
         color: #9b1f1f;
-        margin-left: 1rem;
+        margin-left: 0.1rem;
     }
 }
-
-
-
-/*
-
-
-@media (min-width: 600px) and (max-width: 992px){
+@media (min-width: 993px)and (max-width: 1563px){
     .bg_space {
-        position: absolute; Изменено на absolute
+        position: absolute; /* Изменено на absolute */
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
-        height: 100%; /* Растягиваем фон на весь экран
-        z-index: -1; /* Чтобы фон был на заднем плане
-        object-fit: cover; /* Для заполнения без искажения пропорций
+        height: 100%; /* Растягиваем фон на весь экран */
+        z-index: -1; /* Чтобы фон был на заднем плане */
+        object-fit: cover; /* Для заполнения без искажения пропорций */
     }
     .icon {
         display: flex;
         justify-content: start;
-        width: 20rem;
-        height: 20rem;
-        overflow: hidden; /* Чтобы иконка не выходила за рамки
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden; /* Чтобы иконка не выходила за рамки */
         margin-top: 1rem;
-        margin-left: 3rem;
+        margin-left: 0.6rem;
+    }
+
+    .hamburger-menu {
+        display: None;
     }
 
     .header_buttons {
         display: flex;
-        flex-wrap: wrap; /* Включаем перенос на следующий ряд
-        justify-content: center;
-        top: 0rem; /* Расположить блок кнопок сверху
-        right: 0rem; /* Расположить справа
-        gap: 1rem; /* Отступы между кнопками
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-right: 3%;
+        margin-top: -4rem;
+        position: relative;
+        gap: 1rem;
+        max-width: 100%;
     }
 
     .header_buttons button {
         background-color: transparent;
-        flex: 1 1 30%;
         border: 0.125rem solid white;
         color: white;
-        padding: 2rem 4rem;
+        padding: 1rem 2rem;
         cursor: pointer;
         transition: background-color 0.3s;
         display: flex;
-        align-items: center; /* Выравнивание текста по вертикали
-        justify-content: center; /* Выравнивание текста по горизонтали
-        width: 30rem; /* Адаптивная ширина кнопок
-        height: 9rem; /* Адаптивная высота кнопок
-        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        height: 1rem;
+        font-size: 0.7rem;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
-        flex-basis: 45%; /* Каждая кнопка займет примерно 45% ширины
-        margin-bottom: 1rem; /* Отступ между рядами кнопок
-        text-align: center; /* Текст по центру
+        flex-basis: 10%;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
-    .header_buttons button:nth-last-child(2),
-    .header_buttons button:nth-last-child(1) {
-        flex-basis: 45%; /* Ширина кнопок в новом ряду
-    }
+
 
     .header_buttons .tai_but {
         border: 0.125rem solid #9b1f1f;
         color: white;
     }
 
+
     .text-wrapper {
-        margin-left: 40rem;
-        margin-top: 50rem;
+        position: fixed;
+        max-width: 100%;
+        margin-left: 7rem;
+        margin-top: 14rem;
+        margin-right: 2rem; /* Добавляем отступ справа */
+        word-wrap: break-word; /* Переносим слова при необходимости */
     }
 
     .text-wrapper h5 {
-        font-size: 4rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
-        letter-spacing: 0.125rem;
-        color: #9b1f1f; /* Красный цвет текста
+        letter-spacing: 0.2rem;
+        color: #9b1f1f; /* Красный цвет текста */
         position: relative;
         display: inline-block;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
+        padding-top: 0.5rem;
     }
 
     .red-line {
         display: inline-block;
-        width: 8rem;
-        height: 0.4rem;
+        width: 3rem;
+        height: 0.2rem;
         background-color: #9b1f1f;
-        margin-right: 2rem;
+        margin-right: 0.3rem;
         vertical-align: middle;
-        margin-bottom: 1rem;
+        margin-bottom: 0.1rem;
     }
 
-    /* Главный заголовок
+    /* Главный заголовок */
     .text-wrapper h1 {
-        font-size: 8rem;
-        line-height: 1;
+        font-size: 1.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
         color: #d5d5d5;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
+        max-width: 100%; /* Ограничиваем ширину */
+        word-wrap: break-word; /* Переносим слова, если они не помещаются */
+        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
     }
 
 
     .scroll_down {
-        margin-left: 300rem;
-        margin-top: 50rem;
+        position: fixed;
+        bottom: 3.3rem;
+        left: 50%; /* Центрирование по оси X */
+        transform: translateX(-50%); /* Сдвиг для точного центрирования */
     }
 
     .scroll_down button{
         background: None;
-        font-size: 3.5rem;
+        font-size: 1rem;
         border: None;
         letter-spacing: 0.125rem;
         position: relative;
         display: inline-block;
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.2rem;
         color: #d5d5d5;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
     }
     .scroll_down i {
         color: #9b1f1f;
-        margin-left: 1rem;
+        margin-left: 0.1rem;
     }
 }
 
-    */
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 993px){
+    .bg_space {
+        position: absolute; /* Изменено на absolute */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; /* Растягиваем фон на весь экран */
+        z-index: -1; /* Чтобы фон был на заднем плане */
+        object-fit: cover; /* Для заполнения без искажения пропорций */
+    }
+    .icon {
+        display: flex;
+        justify-content: start;
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden; /* Чтобы иконка не выходила за рамки */
+        margin-top: 1rem;
+        margin-left: 0.6rem;
+    }
+
+    .header_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-right: 3%;
+        margin-top: -4rem;
+        position: relative;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .hamburger-menu {
+        display: None;
+    }
+
+    .header_buttons button {
+        background-color: transparent;
+        border: 0.125rem solid white;
+        color: white;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1rem;
+        font-size: 0.7rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        flex-basis: 10%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+
+    .header_buttons .tai_but {
+        border: 0.125rem solid #9b1f1f;
+        color: white;
+    }
+
+
+    .text-wrapper {
+        position: fixed;
+        max-width: 100%;
+        margin-left: 5rem;
+        margin-top: 12rem;
+        margin-right: 2rem; /* Добавляем отступ справа */
+        word-wrap: break-word; /* Переносим слова при необходимости */
+    }
+
+    .text-wrapper h5 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: #9b1f1f; /* Красный цвет текста */
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        padding-top: 0.5rem;
+    }
+
+    .red-line {
+        display: inline-block;
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #9b1f1f;
+        margin-right: 0.3rem;
+        vertical-align: middle;
+        margin-bottom: 0.1rem;
+    }
+
+    /* Главный заголовок */
+    .text-wrapper h1 {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        max-width: 100%; /* Ограничиваем ширину */
+        word-wrap: break-word; /* Переносим слова, если они не помещаются */
+        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+    }
+
+
+    .scroll_down {
+        position: fixed;
+        bottom: 3.3rem;
+        left: 50%; /* Центрирование по оси X */
+        transform: translateX(-50%); /* Сдвиг для точного центрирования */
+    }
+
+    .scroll_down button{
+        background: None;
+        font-size: 1rem;
+        border: None;
+        letter-spacing: 0.125rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+    }
+    .scroll_down i {
+        color: #9b1f1f;
+        margin-left: 0.1rem;
+    }
+}
+
+
 
 
 
@@ -271,6 +436,122 @@ body {
         margin-left: 0.6rem;
     }
 
+            /* скрываем чекбокс */
+        #menu__toggle {
+          opacity: 0;
+        }
+        /* стилизуем кнопку */
+        .menu__btn {
+          display: flex; /* используем flex для центрирования содержимого */
+          align-items: center;  /* центрируем содержимое кнопки */
+          position: absolute;
+          width: 1.5rem;
+          height: 26px;
+          cursor: pointer;
+          right: 2rem;
+          top: 2.5rem;
+          z-index: 101;
+        }
+
+
+
+        /* добавляем "гамбургер" */
+        .menu__btn > span,
+        .menu__btn > span::before,
+        .menu__btn > span::after {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+          transition: all 0.6s ease; /* Плавная анимация */
+
+        }
+        .menu__btn > span::before {
+          content: '';
+          top: -8px;
+          transition: all 0.6s ease; /* Плавная анимация */
+        }
+        .menu__btn > span::after {
+          content: '';
+          top: 8px;
+          transition: all 0.6s ease; /* Плавная анимация */
+        }
+
+            /* контейнер меню */
+        .menu__box {
+          display: block;
+          position: fixed;
+          visibility: hidden;
+          top: 0;
+          left: 0; /* Позиционируем меню по всему экрану по горизонтали */
+          width: 100%; /* Занимаем всю ширину экрана */
+          margin: 0;
+          padding: 90px 0;
+          list-style: none;
+          text-align: center;
+          background: rgba(30, 29, 29, 0.7); /* Полупрозрачный фон */
+          backdrop-filter: blur(10px); /* Размытие фона */
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+          z-index: 100;
+          opacity: 0;
+          transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+
+        /* элементы меню */
+        .menu__item {
+
+          display: block;
+          padding: 20px 24px;
+          color: white;
+          font-family: "Space Grotesk", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          text-decoration: none;
+        }
+
+        .tai_menu {
+            color: #e76060;
+        }
+        .menu__item:hover {
+            background-color: rgba(0, 255, 255, 0.2); /* Полупрозрачный фон при наведении */
+            margin-right: 6%;
+            margin-left: 6%;
+            border-radius: 20px;
+        }
+
+        .tai_menu:hover {
+            background-color: rgb(215, 145, 145); /* Полупрозрачный фон при наведении */
+
+        }
+
+        /* Плавное появление меню */
+        #menu__toggle:checked ~ .menu__box {
+          visibility: visible;
+          opacity: 1; /* Показываем меню */
+          transition: opacity 0.5s ease;
+        }
+
+        #menu__toggle:checked ~ .menu__btn > span {
+          transform: rotate(315deg);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::before {
+          top: 0;
+          transform: rotate(0deg);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::after {
+          top: 0;
+          transform: rotate(270deg);
+        }
+
+        /* Скрываем text-wrapper и scroll_down при открытии меню */
+        #menu__toggle:checked ~ .text-wrapper,
+        #menu__toggle:checked ~ .scroll_down {
+            visibility: hidden;
+            z-index: -1; /* Снижаем z-index для скрытия */
+        }
+
     .header_buttons {
         display: None; /* Бургер вместо них */
 
@@ -278,7 +559,7 @@ body {
 
 
     .text-wrapper {
-        position: fixed; /* Заменяем absolute на relative для избежания наложения */
+        position: absolute;
         max-width: 100%;
         margin-left: 2rem;
         margin-top: 7rem;
@@ -328,6 +609,7 @@ body {
         bottom: 3.3rem;
         left: 50%; /* Центрирование по оси X */
         transform: translateX(-50%); /* Сдвиг для точного центрирования */
+
     }
 
     .scroll_down button{
