@@ -1,0 +1,136 @@
+
+@media (min-width: 768px) and (max-width: 993px){
+    .bg_space {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; /* Растягиваем фон на весь экран */
+        z-index: -1; /* Чтобы фон был на заднем плане */
+        object-fit: cover; /* Для заполнения без искажения пропорций */
+    }
+    .icon {
+        display: flex;
+        justify-content: start;
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden; /* Чтобы иконка не выходила за рамки */
+        margin-top: 1rem;
+        margin-left: 0.6rem;
+    }
+
+    .header_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-right: 3%;
+        margin-top: -4rem;
+        position: relative;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .hamburger-menu {
+        display: None;
+    }
+
+    .header_buttons button {
+        background-color: transparent;
+        border: 0.125rem solid white;
+        color: white;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1rem;
+        font-size: 0.7rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        flex-basis: 10%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+
+    .header_buttons .tai_but {
+        border: 0.125rem solid #9b1f1f;
+        color: white;
+    }
+
+
+    .text-wrapper {
+        position: absolute;
+        max-width: 100%;
+        margin-left: 5rem;
+        margin-top: 12rem;
+        margin-right: 2rem; /* Добавляем отступ справа */
+        word-wrap: break-word; /* Переносим слова при необходимости */
+        z-index: 0;
+    }
+
+    .text-wrapper h5 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: #9b1f1f; /* Красный цвет текста */
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        padding-top: 0.5rem;
+    }
+
+    .red-line {
+        display: inline-block;
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #9b1f1f;
+        margin-right: 0.3rem;
+        vertical-align: middle;
+        margin-bottom: 0.1rem;
+    }
+
+    /* Главный заголовок */
+    .text-wrapper h1 {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        max-width: 100%; /* Ограничиваем ширину */
+        word-wrap: break-word; /* Переносим слова, если они не помещаются */
+        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+    }
+
+
+    .scroll_down {
+        position: absolute;
+        bottom: 3.3rem;
+        left: 50%; /* Центрирование по оси X */
+        transform: translateX(-50%); /* Сдвиг для точного центрирования */
+        z-index: 0;
+    }
+
+    .scroll_down a{
+        background: None;
+        font-size: 1rem;
+        border: None;
+        letter-spacing: 0.125rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        text-decoration: None;
+    }
+    .scroll_down i {
+        color: #9b1f1f;
+        margin-left: 0.1rem;
+    }
+}

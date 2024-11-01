@@ -1,0 +1,498 @@
+
+@media (max-width: 768px) {
+    .bg_space {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; /* Растягиваем фон на весь экран */
+        z-index: -1; /* Чтобы фон был на заднем плане */
+        object-fit: cover; /* Для заполнения без искажения пропорций */
+    }
+
+    .icon {
+        display: flex;
+        justify-content: start;
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden; /* Чтобы иконка не выходила за рамки */
+        margin-top: 1rem;
+        margin-left: 0.6rem;
+    }
+
+    /* скрываем чекбокс */
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    /* стилизуем кнопку */
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center; /* центрируем содержимое кнопки */
+        position: absolute;
+        width: 1.5rem;
+        height: 26px;
+        cursor: pointer;
+        right: 2rem;
+        top: 1.5rem;
+        z-index: 101;
+    }
+
+
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: all 0.6s ease; /* Плавная анимация */
+
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+        transition: all 0.6s ease; /* Плавная анимация */
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+        transition: all 0.6s ease; /* Плавная анимация */
+    }
+
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 0; /* Позиционируем меню по всему экрану по горизонтали */
+        width: 100%; /* Занимаем всю ширину экрана */
+        margin: 0;
+        padding: 90px 0;
+        list-style: none;
+        text-align: center;
+        background: rgba(30, 29, 29, 0.7); /* Полупрозрачный фон */
+        backdrop-filter: blur(10px); /* Размытие фона */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+        z-index: 100;
+        opacity: 0;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        bottom: 0;
+    }
+
+
+    /* элементы меню */
+    .menu__item {
+
+        display: block;
+        padding: 20px 24px;
+        color: white;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .tai_menu {
+        color: #e76060;
+    }
+
+    .menu__item:hover {
+        background-color: rgba(0, 255, 255, 0.2); /* Полупрозрачный фон при наведении */
+        margin-right: 6%;
+        margin-left: 6%;
+        border-radius: 20px;
+
+    }
+
+    .tai_menu:hover {
+        background-color: rgb(215, 145, 145); /* Полупрозрачный фон при наведении */
+
+    }
+
+    /* Плавное появление меню */
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        opacity: 1; /* Показываем меню */
+        transition: opacity 0.5s ease;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(315deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(270deg);
+    }
+
+    /* Скрываем text-wrapper и scroll_down при открытии меню */
+    #menu__toggle:checked ~ .text-wrapper,
+    #menu__toggle:checked ~ .scroll_down {
+        visibility: hidden;
+        z-index: -1; /* Снижаем z-index для скрытия */
+    }
+
+    .header_buttons {
+        display: None; /* Бургер вместо них */
+
+    }
+
+
+    .text-wrapper {
+        position: absolute;
+        max-width: 100%;
+        margin-left: 3rem;
+        margin-top: 10rem;
+        margin-right: 2rem; /* Добавляем отступ справа */
+        word-wrap: break-word; /* Переносим слова при необходимости */
+        z-index: 0;
+    }
+
+    .text-wrapper h5 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: #9b1f1f; /* Красный цвет текста */
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        padding-top: 0.5rem;
+    }
+
+    .red-line {
+        display: inline-block;
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #9b1f1f;
+        margin-right: 0.3rem;
+        vertical-align: middle;
+        margin-bottom: 0.1rem;
+    }
+
+    /* Главный заголовок */
+    .text-wrapper h1 {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        max-width: 100%; /* Ограничиваем ширину */
+        word-wrap: break-word; /* Переносим слова, если они не помещаются */
+        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+    }
+
+
+    .scroll_down {
+        position: absolute;
+        bottom: 3.3rem;
+        left: 50%; /* Центрирование по оси X */
+        transform: translateX(-50%); /* Сдвиг для точного центрирования */
+
+    }
+
+    .scroll_down a {
+        text-decoration: None;
+        background: None;
+        font-size: 1rem;
+        border: None;
+        letter-spacing: 0.125rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        color: #d5d5d5;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+    }
+
+    .scroll_down i {
+        color: #9b1f1f;
+        margin-left: 0.1rem;
+    }
+
+    .about_me {
+        padding-top: 4rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+
+    .introducing h1 {
+        color: #9b1f1f;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    .my_photo {
+        margin-top: 1rem;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* Для заполнения без искажения пропорций */
+
+    }
+
+    .text_about_me {
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .introducing::after {
+        height: 1px;
+        width: 16rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        content: "";
+        display: inline-block;
+        clear: both;
+    }
+
+
+    .skills h1 {
+        padding-top: 3rem;
+    }
+
+    .skills h2 {
+        padding-top: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 1rem;
+    }
+
+    .skills ul {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .skills h4 {
+        padding-top: 2rem;
+        padding-left: 6%;
+        text-align: left;
+    }
+
+    .skills strong {
+        font-size: 18px;
+    }
+
+    .skills li {
+        padding-top: 1rem;
+        padding-right: 6%;
+        list-style: None;
+    }
+
+    .skills .progress {
+        height: 0.6rem;
+    }
+
+
+    .cv_button {
+        margin-top: 5rem;
+    }
+
+    .skills .cv {
+        display: flex;
+        border: None;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Размытая тень */
+        background-color: #919090;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        height: 4rem;
+        width: 15rem;
+        font-size: 16px;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 500;
+        flex-basis: 8%;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .skills .cv:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+    }
+
+    .progress .progress-bar {
+        background-color: #3b3b3b;
+    }
+
+    .education h1 {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+
+    }
+
+    .education h5 {
+        font-size: 18px;
+        font-weight: bolder;
+        color: #919090;
+    }
+
+    .education .timeline {
+        margin-left: 1rem;
+        margin-right: 2rem;
+        list-style-type: none;
+        position: relative;
+
+    }
+
+    .education .timeline::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        left: 1.5rem;
+        top: 0;
+    }
+
+    .education .part_of_timeline .timeline-marker {
+        background: #0D0A0B;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-left: -2.97rem;
+        box-shadow: 0 0 0 9px #E9E9E9;
+        position: absolute;
+        top: .3rem;
+
+    }
+
+    .education h6 {
+        padding-top: -5px;
+        color: #888888;
+        font-weight: lighter;
+    }
+
+    .education h2 {
+        font-weight: bolder;
+    }
+
+    .education .part_of_timeline {
+        margin-bottom: 2rem;
+        margin-left: 4rem;
+        text-align: left;
+        position: relative; /* Добавляем позиционирование для каждого элемента */
+
+    }
+
+    .education span {
+        font-size: 16px;
+    }
+
+    .education h4 {
+        font-size: 18px;
+    }
+
+
+/* amai */
+    .amai_bg {
+        position: absolute;
+        width: 100%;
+        height: 20rem;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+
+    .tai {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        position: relative; /* Относительное позиционирование для детей */
+        overflow: hidden; /* Скрыть переполнение */
+        height: 20rem; /* Высота контейнера */
+        display: flex; /* Используйте flexbox */
+        align-items: center; /* Центрируем по вертикали */
+        justify-content: center; /* Центрируем по горизонтали */
+    }
+
+    .tai_text {
+
+        display: flex;
+        font-size: 30px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Позволяет тексту занимать всю высоту контейнера */
+    }
+
+    .tai_header {
+
+        display: flex;
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Вверху */
+        right: 0; /* Справа */
+        font-size: 20px;
+        color: #9b1f1f;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        z-index: 1; /* Заголовок выше текста */
+    }
+
+/* works */
+    .intro_works {
+        background-color: #eaeaea;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        display: flex;
+        align-items: center; /* Центрируем по вертикали */
+        justify-content: center; /* Центрируем по горизонтали */
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .intro_works::after {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 1px;
+        width: 16rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        content: "";
+        display: inline-block;
+        clear: both;
+    }
+    .intro_works h3 {
+        color: #9b1f1f;
+        text-transform: uppercase;
+        font-size:20px;
+    }
+    .intro_works h1 {
+        font-size: 30px;
+    }
+
+    .intro_works h5 {
+        margin-top: 0.3rem;
+        font-size: 20px;
+        color: #919090;
+        font-weight: bolder;
+        text-align: center;
+        width: 70%;
+    }
+
+    .projects {
+        background-color: #eaeaea ;
+    }
+
+}
