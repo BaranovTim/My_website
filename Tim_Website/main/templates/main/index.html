@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{% static 'main/css/main_sm_screen.css' %}" media="(min-width: 993px)and (max-width: 1563px)">
     <link rel="stylesheet" href="{% static 'main/css/main_tablet.css' %}" media="(min-width: 768px) and (max-width: 993px)">
     <link rel="stylesheet" href="{% static 'main/css/main_phone.css' %}" media="(max-width: 768px)">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="{% static 'main/img/big_logo.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -19,6 +21,7 @@
     <title>TB</title>
 </head>
 <body>
+    <script src="{% static 'main/js/main.js' %}"></script>
     <div class="top">
         <img src="{% static 'main/img/space.jpg' %}" class="bg_space">
         <header>
@@ -46,7 +49,7 @@
         </header>
 
         <section id="home">
-            <div class="text-wrapper">
+            <div class="text-wrapper appear-animation--up">
                 <h5><span class="red-line"></span> Hello There</h5>
                 <h1>I am Tim.<br>I am an Aspengrove student,<br>planning to become MLE.</h1>
 
@@ -78,87 +81,93 @@
                             <br>
                         I am opened to any job opportunities.If you would like me to be part of your team, feel free to email me at <br><a href="mailto:tim.dimytch@gmail.com">tim.dimytch@gmail.com</a>
                     </h2>
-                    <h1>Some of my skills:</h1>
-                    <h4>Languages</h4>
-                    <ul>
-                        <li>
-                            <strong>Python</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Pascal</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>HTML</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>CSS</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>C#</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>SQL</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                    </ul>
+                        <h1>Some of my skills:</h1>
+
+                    <div class="appear">
+                        <h4>Languages</h4>
+
+                        <ul>
+                            <li>
+                                <strong>Python</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Pascal</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>HTML</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>CSS</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>C#</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>SQL</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                        </ul>
 
 
-                    <h4>Frameworks</h4>
-                    <ul>
-                        <li>
-                            <strong>Django</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Pytorch</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
+                        <h4>Frameworks</h4>
+                        <ul>
+                            <li>
+                                <strong>Django</strong>
+                                <div class="progress ">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Pytorch</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                    <h4>Others</h4>
-                    <ul>
-                        <li>
-                            <strong>Restful APIs</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Git</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>PostgreSQL</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
+                        <h4>Others</h4>
+                        <ul>
+                            <li>
+                                <strong>Restful APIs</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Git</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>PostgreSQL</strong>
+                                <div class="progress">
+                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
+
+
 
                     <div class="cv_button">
                         <a href="{% static 'main/files/my_resume.pdf' %}" download class="btn btn-primary cv">
@@ -225,29 +234,31 @@
 
 
         <section id="works">
-            <div class="intro_works">
-                <h3>Projects</h3>
-                <h1>Check out my projects.</h1>
-                <h5>A combination of personal & school projects. <br> Feel free to contact me for any project collaborations.</h5>
-            </div>
-            <div class="projects">
-                <div class="sepira_project">
-                    <h3>Sepira</h3>
-                    <p>Warehouse Stock Tracker <br> (QR scanner included)</p>
-                    <a href=""><img src="{% static 'main/img/sepira.png' %}" class="photo">
-                    </a>
+            <div class="works">
+                <div class="intro_works">
+                    <h3>Projects</h3>
+                    <h1>Check out my projects.</h1>
+                    <h5>A combination of personal & school projects. <br> Feel free to contact me for any project collaborations.</h5>
                 </div>
-                <!--<div class="amai_project">
-                    <a href=""><img src="{% static 'main/img/.jpg' %}" class="">
-                    </a>
-                    <h3>AmAI</h3>
-                    <p>Am I AI?</p>
-                </div> -->
-                <div class="notinsta_project">
-                    <h3>NotInstagram</h3>
-                    <p>Backend for Social Media app</p>
-                    <a href=""><img src="{% static 'main/img/NotInsta.png' %}" class="photo">
-                    </a>
+                <div class="projects">
+                    <div class="sepira_project">
+                        <h3>Sepira</h3>
+                        <p>Warehouse Stock Tracker <br> (QR scanner included)</p>
+                        <a href="{% static 'main/img/sepira.png' %}" data-lightbox="sepira.png" data-title='my-caption'><img src="{% static 'main/img/sepira.png' %}" class="photo">
+                        </a>
+                    </div>
+                    <!--<div class="amai_project">
+                        <a href=""><img src="{% static 'main/img/.jpg' %}" class="">
+                        </a>
+                        <h3>AmAI</h3>
+                        <p>Am I AI?</p>
+                    </div> -->
+                    <div class="notinsta_project">
+                        <h3>NotInstagram</h3>
+                        <p>Backend for Social Media app</p>
+                        <a href=""><img src="{% static 'main/img/NotInsta.png' %}" class="photo">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -255,20 +266,37 @@
 
         </div>
 
-        <div class="fun_info">
-
+        <div class="fun_list">
+            <ul>
+                <li>
+                    <h1 class="fun_num" data-target="1000">0</h1>
+                    <span>Hours of Coding</span>
+                </li>
+                <li class="fun_special">
+                    <h1 class="fun_num" data-target="3">0</h1>
+                    <span>Projects Completed</span>
+                </li>
+                <li>
+                    <h1 class="fun_num" data-target="500">0</h1>
+                    <span>Cups of Coffee</span>
+                </li>
+                <li>
+                    <h1 class="fun_num" data-target="4000">0</h1>
+                    <span>Hours of Tennis</span>
+                </li>
+            </ul>
         </div>
 
         </section>
 
 
 
-        <section class="contact">
+        <section id="contact">
             <footer class="footer">
                     <img src="{% static 'main/img/spaceship_footer.png' %}" class="footer-img">
                     <div class="footer-content">
                         <h2>Let's Connect.</h2>
-                        <p>Let's sit down and have a cup of tea.</p>
+                        <p>Let's sit down and have a cup of coffee.</p>
                         <div class="contact-info">
                             <p><strong>PHONE</strong><br>(+1) 778 677 9105 </p>
                             <p><strong>EMAIL</strong><br><a href="mailto:tim.dimytch@gmail.com">tim.dimytch@gmail.com</a><br><a href="mailto:tim.baranov@aspengroveschool.com">tim.baranov@aspengroveschool.com</a></p>

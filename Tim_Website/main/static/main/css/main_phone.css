@@ -1,3 +1,60 @@
+@keyframes appear-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+@keyframes appear-up {
+    from {
+        filter: blur(5px);
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.appear-animation--long {
+    animation-name: appear-left;
+    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+.appear-animation--short {
+    animation-delay: 0.1s;
+    animation-name: appear-left;
+    animation-timing-function: ease-out;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+.appear-animation--up {
+    animation-name: appear-up;
+    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+}
+.appear-animation {
+    animation-name: appear;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 @media (max-width: 768px) {
     .bg_space {
         position: absolute;
@@ -34,7 +91,13 @@
         margin-right: 2rem; /* Добавляем отступ справа */
         word-wrap: break-word; /* Переносим слова при необходимости */
         z-index: 0;
+
     }
+    .appear_js {
+        animation: appear 0.1s ease-out;
+    }
+
+
 
     .text-wrapper h5 {
         font-size: 1.5rem;
@@ -166,6 +229,7 @@
         text-align: left;
     }
 
+
     .skills strong {
         font-size: 18px;
     }
@@ -211,6 +275,8 @@
 
     .progress .progress-bar {
         background-color: #3b3b3b;
+        opacity: 0;
+        transform: translateX(-100% );
     }
 
     .education h1 {
@@ -328,8 +394,12 @@
     }
 
 /* works */
-    .intro_works {
+
+    .works {
         background-color: #eaeaea;
+    }
+
+    .intro_works {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
         display: flex;
@@ -374,7 +444,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #eaeaea;
         padding: 20px;
     }
 
@@ -414,6 +483,57 @@
         height: auto; /* Сохраняем пропорции */
         max-width: 100%; /* Не превышаем ширину контейнера */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+    }
+
+    .fun_list {
+        margin: 4rem 0 4rem 0;
+        background-color: white;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+    }
+    .fun_list ul {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .fun_list li {
+        width: 90%;
+        height: auto;
+        margin-bottom: 1rem;
+        list-style: None;
+        padding: 3rem;
+    }
+    .fun_list span {
+        font-weight: bolder;
+        color: #807e7e;
+        font-size: 1.2rem;
+    }
+    .fun_list .fun_num {
+        font-size: 5rem;
+    }
+    .fun_list .fun_num::after {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0.3rem auto;
+        height: 1px;
+        width: 9rem;
+        background-color: rgba(0, 0, 0, 0.15);
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .fun_special {
+        background-color: #0D0A0B;
+        color: white;
+    }
+    .fun_special .fun_num::after {
+        background-color: rgba(169, 6, 6, 0.8);
     }
 
 
@@ -519,6 +639,7 @@
     }
 
     .social-icons a:hover {
+        transform: translateY(+20px);
         color: #9b1f1f; /* Изменение цвета при наведении */
     }
 
