@@ -21,219 +21,211 @@
     <title>TB</title>
 </head>
 <body>
-    <script src="{% static 'main/js/main.js' %}"></script>
-    <div class="top">
-        <img src="{% static 'main/img/space.jpg' %}" class="bg_space">
-        <header>
-            <img src="{% static 'main/img/logo.png' %}" class="icon">
+    <script src="{% static 'main/js/main.js' %}" defer></script>
 
-            <div class="header_buttons">
-                <form action="#home">
-                    <button class="but">Home</button>
-                </form>
-                <form action="#about">
-                    <button class="but">About</button>
-                </form>
-                <form action="#works">
-                    <button class="but">Works</button>
-                </form>
-                <form action="#tai">
-                    <button class="tai_but">TAI</button>
-                </form>
-                <form action="#contact">
-                    <button class="but">Contact</button>
-                </form>
-            </div>
+    <section id="home" class="top">
+            <img src="{% static 'main/img/space.jpg' %}" class="bg_space">
 
+            <header>
+                <img src="{% static 'main/img/logo.png' %}" class="icon">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
 
-        </header>
+                <nav class="nav-bar">
+                    <ul>
+                        <li>
+                            <a href="/#home" class="active">Home</a>
+                        </li>
+                        <li >
+                            <a href="/#about">About</a>
+                        </li>
+                        <li>
+                            <a href="/#works">Works</a>
+                        </li>
 
-        <section id="home">
+                        <li>
+                            <a href="/#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
             <div class="text-wrapper appear-animation--up">
                 <h5><span class="red-line"></span> Hello There</h5>
                 <h1>I am Tim.<br>I am an Aspengrove student,<br>planning to become MLE.</h1>
-
             </div>
 
             <div class="scroll_down">
                 <a href="#about" >Scroll down <i class="fas fa-angle-down"></i></a>
             </div>
-        </section>
-    </div>
+    </section>
 
-        <section id="about">
+
+        <section id="about" class="section">
             <div class="about_me">
-
-
                 <div class="introducing">
                     <h1 class="about">About</h1>
                     <h2>Let me introduce myself.</h2>
                     <img src="{% static 'main/img/my_photo.jpg' %}" class="my_photo">
                     <h2 class="text_about_me">
-                        Hello. Currently, I am studying in Aspengrove school, in the 11th grade. Always learning something new, something that I have to know in a future. <br>Really enjoying practicing it :)
+                        Hello. Currently, I am studying in Aspengrove school, in the 11th grade. Always learning something new, something that I have to know in a future. <br><br>Really enjoying practicing it :)
                     </h2>
                 </div>
 
                 <div class="skills">
-                    <h2>
-                         At the moment I am learning a framework Pytorch, which I have to know to become my dream job, Machine Learning Engineer. I am a very self-driven and motivated person. Stress never lets me down, it keeps me going. If this makes me sounds like a scary teammate, you are wrong as I do carry some sense of humour.
-                        <br>
+                    <div class="skills_text">
+                        <h1>
+                            Hello There!
+                        </h1>
+                        <h2>
+                             At the moment I am learning a framework Pytorch, which I have to know to become my dream job, Machine Learning Engineer. I am a very self-driven and motivated person. Stress never lets me down, it keeps me going. If this makes me sounds like a scary teammate, you are wrong as I do carry some sense of humour.
                             <br>
-                        I am opened to any job opportunities.If you would like me to be part of your team, feel free to email me at <br><a href="mailto:tim.dimytch@gmail.com">tim.dimytch@gmail.com</a>
-                    </h2>
-                        <h1>Some of my skills:</h1>
-
-                    <div class="appear">
-                        <h4>Languages</h4>
-
-                        <ul>
-                            <li>
-                                <strong>Python</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>Pascal</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>HTML</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>CSS</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>C#</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>SQL</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                        </ul>
-
-
-                        <h4>Frameworks</h4>
-                        <ul>
-                            <li>
-                                <strong>Django</strong>
-                                <div class="progress ">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>Pytorch</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <h4>Others</h4>
-                        <ul>
-                            <li>
-                                <strong>Restful APIs</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>Git</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>PostgreSQL</strong>
-                                <div class="progress">
-                                    <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-
-                        </ul>
+                                <br>
+                            I am opened to any job opportunities.If you would like me to be part of your team, feel free to email me at <br><a href="mailto:tim.dimytch@gmail.com">tim.dimytch@gmail.com</a>
+                        </h2>
                     </div>
+                    <div class="skills_div">
+                            <h1>Some of my skills:</h1>
+
+                        <div class="appear">
+                            <h4>Languages</h4>
+
+                            <ul>
+                                <li>
+                                    <strong>Python</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Pascal</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>HTML</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>CSS</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>C#</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>SQL</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                            </ul>
 
 
+                            <h4>Frameworks</h4>
+                            <ul>
+                                <li>
+                                    <strong>Django</strong>
+                                    <div class="progress ">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Pytorch</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
 
-                    <div class="cv_button">
+                            </ul>
+
+                            <h4>Others</h4>
+                            <ul>
+                                <li>
+                                    <strong>Restful APIs</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Git</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>PostgreSQL</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv_button">
                         <a href="{% static 'main/files/my_resume.pdf' %}" download class="btn btn-primary cv">
                           Download my CV
                         </a>
                     </div>
 
-                </div>
-
                 <div class="education">
                     <h1>My Education.</h1>
                     <div class="timeline">
-                        <div class="part_of_timeline">
-                            <div class="timeline-marker"></div>
-                            <h5>2024-2026</h5>
-                            <h2>Aspengrove School</h2>
-                            <h4>AVG: <small> 6.15 / 7.00 </small> </h4>
-                            <h6>Studying here right now. Have learned Pytorch, C++. Did a lot of projects.</h6>
+                        <div class="timeline_left">
+                            <div class="part_of_timeline">
+                                <div class="timeline-marker"></div>
+                                <h5>2024-2026</h5>
+                                <h2>Aspengrove School</h2>
+                                <h4>AVG: <small> 6.15 / 7.00 </small> </h4>
+                                <h6>Studying here right now. Have learned Pytorch, C++. Did a lot of projects.</h6>
 
+                            </div>
+                            <div class="part_of_timeline">
+                                <div class="timeline-marker"></div>
+                                <h5>2023-2024</h5>
+                                <h2>VIU High School</h2>
+                                <h4>AVG: <small> 6.15 / 7.00</small></h4>
+                                <h6>Have been studying in VIU High School for a year. Have learned during that school year:
+                                    Python (Django), C#, PostgreSQL, Git, Pestful Apis.
+                                    So that school year was powerfull for my career!</h6>
+                            </div>
                         </div>
-                        <div class="part_of_timeline">
-                            <div class="timeline-marker"></div>
-                            <h5>2023-2024</h5>
-                            <h2>VIU High School</h2>
-                            <h4>AVG: <small> 6.15 / 7.00</small></h4>
-                            <h6>Have been studying in VIU High School for a year. Have learned during that school year:
-                                Python (Django), C#, PostgreSQL, Git, Pestful Apis.
-                                So that school year was powerfull for my career!</h6>
-
-                        </div>
-                        <div class="part_of_timeline">
-                            <div class="timeline-marker"></div>
-                            <h5>2022-2023</h5>
-                            <h2>Liceum of Tiraspol</h2>
-                            <h4>AVG: <small> 4.50 / 5.00 </small></h4>
-                            <h6>Have been studying in Liceum for a year. Have learned HTML, CSS, Pascal.  </h6>
-                        </div>
-                        <div class="part_of_timeline">
-                            <div class="timeline-marker"></div>
-                            <h5>2015-2022</h5>
-                            <h2>Gymnasium of Tiraspol</h2>
-                            <h4>AVG: <small>4.95 / 5.00</small></h4>
-                            <h6>Have been studying there for 7 years. Participated in different math & physics competitions a lot.</h6>
-
+                        <div class="timeline_right">
+                            <div class="part_of_timeline">
+                                <div class="timeline-marker"></div>
+                                <h5>2022-2023</h5>
+                                <h2>Liceum of Tiraspol</h2>
+                                <h4>AVG: <small> 4.50 / 5.00 </small></h4>
+                                <h6>Have been studying in Liceum for a year. Have learned HTML, CSS, Pascal.  </h6>
+                            </div>
+                            <div class="part_of_timeline">
+                                <div class="timeline-marker"></div>
+                                <h5>2015-2022</h5>
+                                <h2>Gymnasium of Tiraspol</h2>
+                                <h4>AVG: <small>4.95 / 5.00</small></h4>
+                                <h6>Have been studying there for 7 years. Participated in different math & physics competitions a lot.</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </section>
-<!--
-        <section id="tai">
-            <div class="tai">
-                <img src="{% static 'main/img/space.jpg' %}" class="amai_bg">
-                <div class="tai_header">
-                    <h2>AmAI</h2>
-                </div>
-
-                <div class="tai_text">
-                    <h1 class="Soon">Soon...</h1>
-                </div>
-            </div>
-        </section> -->
-
-
-        <section id="works">
+        <section id="works" class="section">
             <div class="works">
                 <div class="intro_works">
                     <h3>Projects</h3>
@@ -272,14 +264,15 @@
                     <h1 class="fun_num" data-target="1000">0</h1>
                     <span>Hours of Coding</span>
                 </li>
-                <li class="fun_special">
-                    <h1 class="fun_num" data-target="3">0</h1>
-                    <span>Projects Completed</span>
-                </li>
                 <li>
                     <h1 class="fun_num" data-target="500">0</h1>
                     <span>Cups of Coffee</span>
                 </li>
+                <li class="fun_special">
+                    <h1 class="fun_num" data-target="3">0</h1>
+                    <span>Projects Completed</span>
+                </li>
+
                 <li>
                     <h1 class="fun_num" data-target="4000">0</h1>
                     <span>Hours of Tennis</span>
@@ -291,9 +284,11 @@
 
 
 
-        <section id="contact">
+        <section id="contact" class="section">
             <footer class="footer">
-                    <img src="{% static 'main/img/spaceship_footer.png' %}" class="footer-img">
+                    <img src="{% static 'main/img/moon.png' %}" class="footer-img footer-img-large">
+                    <img src="{% static 'main/img/spaceship_footer.png' %}" class="footer-img footer-img-small">
+
                     <div class="footer-content">
                         <h2>Let's Connect.</h2>
                         <p>Let's sit down and have a cup of coffee.</p>

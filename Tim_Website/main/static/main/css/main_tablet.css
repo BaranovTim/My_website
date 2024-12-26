@@ -1,136 +1,603 @@
-
-@media (min-width: 768px) and (max-width: 993px){
-    .bg_space {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%; /* Растягиваем фон на весь экран */
-        z-index: -1; /* Чтобы фон был на заднем плане */
-        object-fit: cover; /* Для заполнения без искажения пропорций */
+@media (min-width: 768px)and (max-width: 993px){
+        @keyframes appear-left {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
-    .icon {
-        display: flex;
-        justify-content: start;
-        width: 5rem;
-        height: 5rem;
-        overflow: hidden; /* Чтобы иконка не выходила за рамки */
-        margin-top: 1rem;
-        margin-left: 0.6rem;
+    @keyframes appear {
+        from {
+            opacity: 0;
+
+        }
+        to {
+            opacity: 1;
+
+        }
+    }
+    @keyframes appear-up {
+        from {
+            filter: blur(5px);
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        to {
+            filter: blur(0);
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .appear-animation--long {
+        animation-name: appear-left;
+        animation-timing-function: ease-out;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+    .appear-animation--short {
+        animation-delay: 0.1s;
+        animation-name: appear-left;
+        animation-timing-function: ease-out;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+    .appear-animation--up {
+        animation-name: appear-up;
+        animation-timing-function: ease-out;
+        animation-duration: 1.5s;
+    }
+    .appear-animation {
+        animation-name: appear;
+        animation-timing-function: ease-out;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+        .bg_space {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%; /* Растягиваем фон на весь экран */
+            z-index: -1; /* Чтобы фон был на заднем плане */
+            object-fit: cover; /* Для заполнения без искажения пропорций */
+        }
+
+        .icon {
+            display: flex;
+            margin-left: -2rem;
+            justify-content: start;
+            width: 7rem;
+            height: 7rem;
+            overflow: hidden; /* Чтобы иконка не выходила за рамки */
+            margin-top: 1.5rem;
+        }
+
+
+
+
+        .text-wrapper {
+            position: absolute;
+            max-width: 100%;
+            margin-left: 3rem;
+            margin-top: 10rem;
+            margin-right: 2rem; /* Добавляем отступ справа */
+            word-wrap: break-word; /* Переносим слова при необходимости */
+            z-index: 0;
+
+        }
+
+        .appear_js {
+            animation: appear 0.1s ease-out;
+        }
+
+
+        .text-wrapper h5 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: #9b1f1f; /* Красный цвет текста */
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            padding-top: 0.5rem;
+        }
+
+        .red-line {
+            display: inline-block;
+            width: 3rem;
+            height: 0.2rem;
+            background-color: #9b1f1f;
+            margin-right: 0.3rem;
+            vertical-align: middle;
+            margin-bottom: 0.1rem;
+        }
+
+        /* Главный заголовок */
+        .text-wrapper h1 {
+            font-size: 1.9rem;
+            line-height: 1.5;
+            letter-spacing: 0.1rem;
+            color: #d5d5d5;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            max-width: 100%; /* Ограничиваем ширину */
+            word-wrap: break-word; /* Переносим слова, если они не помещаются */
+            overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+        }
+
+
+        .scroll_down {
+            position: absolute;
+            bottom: 3.3rem;
+            left: 50%; /* Центрирование по оси X */
+            transform: translateX(-50%); /* Сдвиг для точного центрирования */
+
+        }
+
+        .scroll_down a {
+            text-decoration: None;
+            background: None;
+            font-size: 1rem;
+            border: None;
+            letter-spacing: 0.125rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0.2rem;
+            color: #d5d5d5;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+        }
+
+        .scroll_down i {
+            color: #9b1f1f;
+            margin-left: 0.1rem;
+        }
+
+        .about_me {
+            padding-top: 4rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+
+        .introducing h1 {
+            color: #9b1f1f;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .my_photo {
+            margin-top: 1rem;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Для заполнения без искажения пропорций */
+
+        }
+
+        .text_about_me {
+            padding-top: 1.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .introducing::after {
+            height: 1px;
+            width: 16rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            content: "";
+            display: inline-block;
+            clear: both;
+        }
+
+
+        .skills h1 {
+            padding-top: 3rem;
+        }
+
+        .skills h2 {
+            padding-top: 1.5rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            font-size: 1rem;
+        }
+
+        .skills ul {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .skills h4 {
+            padding-top: 2rem;
+            padding-left: 6%;
+            text-align: left;
+        }
+
+
+        .skills strong {
+            font-size: 18px;
+        }
+
+        .skills li {
+            padding-top: 1rem;
+            padding-right: 6%;
+            list-style: None;
+        }
+
+        .skills .progress {
+            height: 0.6rem;
+        }
+
+
+        .cv_button {
+            margin-top: 5rem;
+        }
+
+        .cv_button .cv {
+            display: flex;
+            border: None;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Размытая тень */
+            background-color: #919090;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            height: 4rem;
+            width: 15rem;
+            font-size: 16px;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 500;
+            flex-basis: 8%;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .skills .cv:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+        }
+
+        .progress .progress-bar {
+            background-color: #3b3b3b;
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .education h1 {
+            padding-top: 5rem;
+            padding-bottom: 2rem;
+
+        }
+
+        .education h5 {
+            font-size: 18px;
+            font-weight: bolder;
+            color: #919090;
+        }
+
+        .education .timeline {
+            margin-left: 1rem;
+            margin-right: 2rem;
+            list-style-type: none;
+            position: relative;
+
+        }
+
+        .education .timeline::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 1.5rem;
+            top: 0;
+        }
+
+        .education .part_of_timeline .timeline-marker {
+            background: #0D0A0B;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            margin-left: -2.97rem;
+            box-shadow: 0 0 0 9px #E9E9E9;
+            position: absolute;
+            top: .3rem;
+
+        }
+
+        .education h6 {
+            padding-top: -5px;
+            color: #888888;
+            font-weight: lighter;
+        }
+
+        .education h2 {
+            font-weight: bolder;
+        }
+
+        .education .part_of_timeline {
+            margin-bottom: 2rem;
+            margin-left: 4rem;
+            text-align: left;
+            position: relative; /* Добавляем позиционирование для каждого элемента */
+
+        }
+
+        .education span {
+            font-size: 16px;
+        }
+
+        .education h4 {
+            font-size: 18px;
+        }
+
+
+
+        /* works */
+        .works {
+            background-color: #eaeaea;
+        }
+
+        .intro_works {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center; /* Центрируем по вертикали */
+            justify-content: center; /* Центрируем по горизонтали */
+            flex-direction: column;
+            padding-top: 5rem;
+        }
+
+        .intro_works::after {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            height: 1px;
+            width: 16rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            content: "";
+            display: inline-block;
+            clear: both;
+        }
+
+        .intro_works h3 {
+            color: #9b1f1f;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .intro_works h1 {
+            font-size: 30px;
+        }
+
+        .intro_works h5 {
+            margin-top: 0.3rem;
+            font-size: 20px;
+            color: #919090;
+            font-weight: bolder;
+            text-align: center;
+            width: 70%;
+        }
+
+        .projects {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sepira_project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%; /* Контейнер занимает всю ширину */
+            max-width: 400px; /* Ограничение ширины для центрации */
+            margin: 20px auto; /* Отступы вокруг */
+            text-align: center; /* Центрируем текст */
+        }
+
+        .sepira_project .photo {
+            border-radius: 20px;
+            width: 100%; /* Изображение заполняет контейнер */
+            height: auto; /* Сохраняем пропорции */
+            max-width: 100%; /* Не превышаем ширину контейнера */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+        }
+
+        .notinsta_project {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%; /* Контейнер занимает всю ширину */
+            max-width: 400px; /* Ограничение ширины для центрации */
+            margin: 20px auto; /* Отступы вокруг */
+            text-align: center; /* Центрируем текст */
+        }
+
+        .notinsta_project .photo {
+            border-radius: 10px;
+            width: 100%; /* Изображение заполняет контейнер */
+            height: auto; /* Сохраняем пропорции */
+            max-width: 100%; /* Не превышаем ширину контейнера */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+        }
+
+        .fun_list {
+            margin: 4rem 0 4rem 0;
+            background-color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+        }
+
+        .fun_list ul {
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .fun_list li {
+            width: 90%;
+            height: auto;
+            margin-bottom: 1rem;
+            list-style: None;
+            padding: 3rem;
+        }
+
+        .fun_list span {
+            font-weight: bolder;
+            color: #807e7e;
+            font-size: 1.2rem;
+        }
+
+        .fun_list .fun_num {
+            font-size: 5rem;
+        }
+
+        .fun_list .fun_num::after {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0.3rem auto;
+            height: 1px;
+            width: 9rem;
+            background-color: rgba(0, 0, 0, 0.15);
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .fun_special {
+            background-color: #0D0A0B;
+            color: white;
+        }
+
+        .fun_special .fun_num::after {
+            background-color: rgba(169, 6, 6, 0.8);
+        }
+
+
+        .footer {
+            position: relative;
+            display: flex; /* Включаем Flexbox */
+            flex-direction: column; /* Располагаем элементы по вертикали */
+            justify-content: center; /* Выравниваем по вертикали */
+            align-items: center; /* Выравниваем по горизонтали */
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .footer-img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto; /* Растягиваем фон на весь экран */
+            z-index: -1; /* Чтобы фон был на заднем плане */
+            object-fit: cover; /* Для заполнения без искажения пропорций */
+        }
+
+        .footer-content {
+            max-width: 100%;
+            position: absolute;
+            word-wrap: break-word; /* Переносим слова при необходимости */
+            overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+            top: 47%; /* Относительно родителя */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Центрируем по обеим осям */
+            z-index: 1; /* Гарантируем, что текст окажется выше изображения */
+        }
+
+        .footer-content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-content p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            padding-top: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .contact-info a {
+            background: linear-gradient(90deg, white, gray, white);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s infinite;
+            text-decoration: None;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .contact-info strong {
+            color: #9b1f1f; /* Красный цвет для заголовков PHONE и EMAIL */
+        }
+
+
+        .social-icons {
+            position: relative;
+            left: 50%; /* Смещает блок на центр экрана */
+            transform: translateX(-50%); /* Центрирует по горизонтали */
+            bottom: 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(+20px);
+            color: #9b1f1f; /* Изменение цвета при наведении */
+        }
+
     }
 
-    .header_buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: right;
-        margin-right: 3%;
-        margin-top: -4rem;
-        position: relative;
-        gap: 1rem;
-        max-width: 100%;
-    }
-
-    .hamburger-menu {
-        display: None;
-    }
-
-    .header_buttons button {
-        background-color: transparent;
-        border: 0.125rem solid white;
-        color: white;
-        padding: 1rem 2rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 1rem;
-        font-size: 0.7rem;
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 400;
-        flex-basis: 10%;
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-
-
-    .header_buttons .tai_but {
-        border: 0.125rem solid #9b1f1f;
-        color: white;
-    }
-
-
-    .text-wrapper {
-        position: absolute;
-        max-width: 100%;
-        margin-left: 5rem;
-        margin-top: 12rem;
-        margin-right: 2rem; /* Добавляем отступ справа */
-        word-wrap: break-word; /* Переносим слова при необходимости */
-        z-index: 0;
-    }
-
-    .text-wrapper h5 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        color: #9b1f1f; /* Красный цвет текста */
-        position: relative;
-        display: inline-block;
-        margin-bottom: 2rem;
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 400;
-        padding-top: 0.5rem;
-    }
-
-    .red-line {
-        display: inline-block;
-        width: 3rem;
-        height: 0.2rem;
-        background-color: #9b1f1f;
-        margin-right: 0.3rem;
-        vertical-align: middle;
-        margin-bottom: 0.1rem;
-    }
-
-    /* Главный заголовок */
-    .text-wrapper h1 {
-        font-size: 1.9rem;
-        line-height: 1.5;
-        letter-spacing: 0.1rem;
-        color: #d5d5d5;
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 400;
-        max-width: 100%; /* Ограничиваем ширину */
-        word-wrap: break-word; /* Переносим слова, если они не помещаются */
-        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
-    }
-
-
-    .scroll_down {
-        position: absolute;
-        bottom: 3.3rem;
-        left: 50%; /* Центрирование по оси X */
-        transform: translateX(-50%); /* Сдвиг для точного центрирования */
-        z-index: 0;
-    }
-
-    .scroll_down a{
-        background: None;
-        font-size: 1rem;
-        border: None;
-        letter-spacing: 0.125rem;
-        position: relative;
-        display: inline-block;
-        margin-bottom: 0.2rem;
-        color: #d5d5d5;
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 400;
-        text-decoration: None;
-    }
-    .scroll_down i {
-        color: #9b1f1f;
-        margin-left: 0.1rem;
-    }
-}

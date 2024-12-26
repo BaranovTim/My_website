@@ -76,4 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+hamburger = document.querySelector('.hamburger');
+hamburger.onclick = function () {
+    navBar = document.querySelector('.nav-bar');
+    navBar.classList.toggle('active');
+};
+
+// Закрытие меню при нажатии на ссылку
+document.querySelectorAll('.nav-bar a').forEach(link => {
+    link.onclick = function () {
+        navBar.classList.remove('active'); // Удаляем класс 'active', чтобы закрыть меню
+    };
+});
+
 
