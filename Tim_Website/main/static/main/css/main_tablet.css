@@ -80,7 +80,7 @@
 
 
         .text-wrapper {
-            position: absolute;
+            position: relative;
             max-width: 100%;
             margin-left: 3rem;
             margin-top: 10rem;
