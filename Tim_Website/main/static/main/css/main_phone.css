@@ -84,7 +84,7 @@
         position: absolute;
         max-width: 100%;
         margin-left: 3rem;
-        margin-top: 7rem;
+        margin-top: 5rem;
         margin-right: 2rem; /* Добавляем отступ справа */
         word-wrap: break-word; /* Переносим слова при необходимости */
         z-index: 0;
