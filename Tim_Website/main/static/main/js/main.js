@@ -89,15 +89,27 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
     };
 });
 
-window.onload = function() {
-            const preloader = document.querySelector('.preloader');
+window.onload = function () {
+    const preloader = document.querySelector('.preloader');
+    const startTime = performance.now(); // Время начала загрузки
 
-            // Убираем прелоадер после загрузки сайта
+    // Минимальное время показа прелоадера (в миллисекундах)
+    const minDisplayTime = 800;
+
+    // Убираем прелоадер после загрузки сайта, но не раньше 1.5 сек
+    const hidePreloader = () => {
+        const elapsedTime = performance.now() - startTime;
+        const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
+        setTimeout(() => {
             preloader.style.transition = 'opacity 0.5s ease';
             preloader.style.opacity = 0;
 
-            // Показываем контент
             setTimeout(() => {
                 preloader.style.display = 'none';
             }, 500); // Задержка для плавного скрытия
-        };
+        }, remainingTime);
+    };
+
+    hidePreloader();
+};
