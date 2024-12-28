@@ -89,10 +89,15 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
     };
 });
 
+window.onload = function() {
+            const preloader = document.querySelector('.preloader');
 
-var loader = document.querySelector('.preloader'); // Выбираем первый элемент с классом preloader
+            // Убираем прелоадер после загрузки сайта
+            preloader.style.transition = 'opacity 0.5s ease';
+            preloader.style.opacity = 0;
 
-window.addEventListener('load', function () {
-    loader.style.display = 'none'; // Скрываем элемент после загрузки страницы
-});
-
+            // Показываем контент
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500); // Задержка для плавного скрытия
+        };

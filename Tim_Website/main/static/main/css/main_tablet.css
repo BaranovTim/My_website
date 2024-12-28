@@ -265,10 +265,6 @@
             justify-content: center;
         }
 
-        .skills .cv:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
-        }
-
         .progress .progress-bar {
             background-color: #3b3b3b;
             opacity: 0;
