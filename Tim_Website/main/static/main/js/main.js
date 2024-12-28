@@ -90,3 +90,9 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
 });
 
 
+var loader = document.querySelector('.preloader'); // Выбираем первый элемент с классом preloader
+
+window.addEventListener('load', function () {
+    loader.style.display = 'none'; // Скрываем элемент после загрузки страницы
+});
+
