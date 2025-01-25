@@ -171,11 +171,27 @@ svg {
     width: 150px;
 }
 
+.shown-pop-up img{
+    cursor: pointer;
+}
+.shown-pop-up img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+}
 
-.cv_button.cv:hover {
-    background-color: #9b1f1f;
-    color: #0D0A0B;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .5);
+    pointer-events: none;
+    z-index: 999;
+}
+#overlay.active-overlay{
+    opacity: 1;
+    pointer-events: all;
 }
 
 

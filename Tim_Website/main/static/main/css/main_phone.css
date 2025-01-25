@@ -159,6 +159,9 @@
         color: #9b1f1f;
         margin-left: 0.1rem;
     }
+    .additional-icons {
+        display: none;
+    }
 
     .about_me {
         padding-top: 4rem;
@@ -264,6 +267,11 @@
         align-items: center;
         margin: 0 auto;
         justify-content: center;
+    }
+    .cv_button .cv:hover {
+        background-color: white;
+        color: #0D0A0B;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
     }
 
 

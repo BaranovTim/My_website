@@ -160,6 +160,40 @@
         transform: translateX(-50%); /* Сдвиг для точного центрирования */
 
     }
+    .scroll_down a:hover {
+        i {
+            color: white;
+        }
+    }
+
+    .additional-icons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        bottom: 0;
+        right: 3rem;
+        gap: 10px;
+    }
+    .additional-icons a {
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .additional-icons a:hover {
+        color: #9b1f1f;
+
+    }
+    .additional-icons::after {
+        height: 4.5rem;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.71);
+        content: "";
+        display: inline-block;
+        clear: both;
+        align-self: center; /* Центрирование по вертикали */
+    }
 
     .scroll_down a {
         text-decoration: None;
@@ -303,7 +337,11 @@
         margin: 0 auto;
         justify-content: center;
     }
-
+    .cv_button .cv:hover {
+        background-color: white;
+        color: #0D0A0B;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+    }
     .progress .progress-bar {
         background-color: #3b3b3b;
         opacity: 0;
@@ -319,12 +357,12 @@
     }
 
     .education .timeline {
-        width: 80%; /* Установите желаемую ширину для .timeline */
+        width: 70%; /* Установите желаемую ширину для .timeline */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
-        margin-left: 25rem;
+        margin-left: 15rem;
         padding-top: 2rem;
     }
 

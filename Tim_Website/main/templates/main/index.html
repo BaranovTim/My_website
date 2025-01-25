@@ -27,7 +27,7 @@
             <img src="{% static 'main/img/space.jpg' %}" class="bg_space">
 
             <header>
-                <img src="{% static 'main/img/logo.png' %}" class="icon">
+                <a href="/"><img src="{% static 'main/img/logo.png' %}" class="icon"></a>
                 <div class="hamburger">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -60,6 +60,11 @@
 
             <div class="scroll_down">
                 <a href="#about" >Scroll down <i class="fas fa-angle-down"></i></a>
+            </div>
+            <div class="additional-icons">
+                <a href="https://github.com/BaranovTim"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tim-baranov/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tim.dimytch@gmail.com"><i class="fa fa-envelope"></i></a>
             </div>
     </section>
 
@@ -177,7 +182,7 @@
                 </div>
 
                 <div class="cv_button">
-                        <a href="{% static 'main/files/tim_baranov_resume.pdf' %}" download class="btn btn-primary cv">
+                        <a href="{% static 'main/files/tim_baranov_resume.pdf' %}" download class="cv btn ">
                           Download my CV
                         </a>
                     </div>
@@ -236,23 +241,152 @@
                     <div class="sepira_project">
                         <h3>Sepira</h3>
                         <p>Warehouse Stock Tracker <br> (QR scanner included)</p>
-                        <a href="{% static 'main/img/sepira.png' %}" data-lightbox="sepira.png" data-title='my-caption'><img src="{% static 'main/img/sepira.png' %}" class="photo">
-                        </a>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/Sepira.png' %}" data-modal-target="#modal-sepira" class="photo sepira-photo">
+                        </div>
+
+                        <div id="modal-sepira" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>Sepira</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/Sepira.png' %}" class="photo">
+                                </div>
+                                <div class="modal-text modal-text-sepira" >
+                                    <h3>Description</h3>
+                                    <p><strong>Sepira</strong> is a website currently running on <strong>sepira.com</strong>, designed to manage a system of goods, allowing for their creation, modification, and organization. This platform facilitates the allocation of goods into specific sections within a warehouse using only their QR codes. Workers can add items to the warehouse, retrieve them, and monitor quantities. All operations are supported by a PostgreSQL database.</p>
+
+                                    <p>The QR code scanner is implemented in <strong>JavaScript</strong>, while the backend leverages the <strong>Django framework</strong> written in Python. Additionally, there are unique features for <strong>superusers</strong>—individuals responsible for managing the database. Superusers have access to advanced functionalities, such as adding <strong>news updates</strong> to ensure workers stay informed about the latest developments within the warehouse, as well as tracking worker activities, including the time, item, and quantity involved in each operation.</p>
+
+                                    <h2>Key Features:</h2>
+                                    <h3>1. QR Code Scanning:</h3>
+                                    <ul>
+                                        <li>Scans goods to track and allocate them efficiently within the warehouse.</li>
+                                        <li>Links scanned data to the user and timestamp, ensuring traceability.</li>
+                                        <li>Workers input the quantity after scanning, which updates the database.</li>
+                                    </ul>
+
+                                    <h3>2. Warehouse Operations:</h3>
+                                    <ul>
+                                        <li>Add goods to the warehouse.</li>
+                                        <li>Retrieve goods.</li>
+                                        <li>Update item quantities.</li>
+                                        <li>Return goods.</li>
+                                    </ul>
+
+                                    <h3>3. PostgreSQL Database:</h3>
+                                    <ul>
+                                        <li>Centralized storage for all data related to goods, users, and operations.</li>
+                                    </ul>
+
+                                    <h3>4. Superuser Features:</h3>
+                                    <ul>
+                                        <li>Manage the database.</li>
+                                        <li>Add and edit warehouse-related news.</li>
+                                        <li>Track worker actions, including time, items handled, and quantities.</li>
+                                    </ul>
+
+                                    <h3>5. News Feature:</h3>
+                                    <ul>
+                                        <li>Keeps workers informed about the latest updates, changes, and announcements.</li>
+                                    </ul>
+
+                                    <h3>6. User Roles:</h3>
+                                    <ul>
+                                        <li><strong>Workers:</strong> Focus on day-to-day operations like scanning, adding, and managing goods.</li>
+                                        <li><strong>Superusers:</strong> Handle administrative tasks and maintain data integrity.</li>
+                                    </ul>
+
+                                    <h3>7. Optimized Design:</h3>
+                                    <ul>
+                                        <li>The interface is specifically tailored for efficient interaction, prioritizing functionality to streamline warehouse operations.</li>
+                                    </ul>
+                                    <p>The code can be found here: <a href="https://github.com/BaranovTim/Sepira" target="_blank"><br>GitHub Repository</a>.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--<div class="amai_project">
-                        <a href=""><img src="{% static 'main/img/.jpg' %}" class="">
-                        </a>
-                        <h3>AmAI</h3>
-                        <p>Am I AI?</p>
-                    </div> -->
+
                     <div class="notinsta_project">
                         <h3>NotInstagram</h3>
                         <p>Backend for Social Media app</p>
-                        <a href=""><img src="{% static 'main/img/NotInsta.png' %}" class="photo">
-                        </a>
+
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/NotInsta.png' %}" data-modal-target="#modal-notinstagram" class="photo">
+                        </div>
+
+                        <div id="modal-notinstagram" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>NotInstagram</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img ">
+                                    <img src="{% static 'main/img/NotInsta.png' %}" class="photo">
+                                </div>
+                                <div class="modal-text modal-text-notinsta">
+                                    <h3>Description</h3>
+                                    <p><strong>NotInstagram</strong> is a backend application developed for a photo-sharing social network. This project focuses on designing and implementing an API for uploading posts and their associated photos, as well as enabling users to comment on and like posts. The project is a practical application aimed at enhancing skills in API development and database integration, with potential use as a portfolio project.</p>
+
+                                    <p>The backend is powered by the <strong>Django framework</strong> in <strong>Python</strong>, and all data is managed using a <strong>PostgreSQL database</strong>.</p>
+
+                                    <h2>Key Features:</h2>
+
+                                    <h3>1. Posts:</h3>
+                                    <ul>
+                                        <li>Posts consist of text and a photo.</li>
+                                        <li>The creation time of each post is stored.</li>
+                                        <li>Posts can only be created by authorized users.</li>
+                                        <li>Editing a post is restricted to its author.</li>
+                                    </ul>
+
+                                    <h3>2. Comments:</h3>
+                                    <ul>
+                                        <li>Users can write comments on specific posts.</li>
+                                        <li>Only authorized users can leave comments.</li>
+                                        <li>Each comment includes text and the date it was created.</li>
+                                    </ul>
+
+                                    <h3>3. Likes:</h3>
+                                    <ul>
+                                        <li>Users can react to posts by leaving a like.</li>
+                                        <li>The total like count is displayed when viewing a post.</li>
+                                    </ul>
+
+                                    <h3>4. API Design:</h3>
+                                    <ul>
+                                        <li>Endpoints and HTTP methods are carefully designed for ease of use and adherence to RESTful principles.</li>
+                                    </ul>
+
+                                    <h3>5. Post Details:</h3>
+                                    <ul>
+                                        <li>Each post's details include its text, photo, and creation time.</li>
+                                        <li>A list of associated comments is displayed with their content and creation dates.</li>
+                                        <li>The like count for the post is also shown.</li>
+                                    </ul>
+
+                                    <h3>Skills Developed:</h3>
+                                    <ul>
+                                        <li>Working with Django models for robust data representation.</li>
+                                        <li>Implementing serializers to handle data input and output effectively.</li>
+                                        <li>Designing RESTful APIs with endpoints and appropriate HTTP methods.</li>
+                                        <li>Real-world application of backend development skills.</li>
+                                    </ul>
+
+                                    <p>The code for this project is available here: <a href="https://github.com/BaranovTim/Not_Insta" target="_blank">GitHub Repository</a>.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="overlay"></div>
 
         <div class="awards">
 
@@ -311,7 +445,7 @@
 
         </section>
 
-    <div class="preloader">
+   <div class="preloader">
         <svg viewBox="0 0 100 100">
             <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
                 <path d="M 21 40 V 59">
@@ -337,10 +471,6 @@
             </g>
         </svg>
     </div>
-
-
-
-
 
 </body>
 </html>
