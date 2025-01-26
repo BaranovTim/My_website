@@ -533,6 +533,87 @@
     .notinsta_project p {
         margin-top: 1rem;
     }
+    .active-modal {
+        max-height: 90%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 200ms ease-in-out;
+        border: 1px solid black;
+        border-radius: 10px;
+        z-index: 1010;
+        background-color: white;
+        width: 60%;
+        max-width: 80%;
+        display: block;
+        padding: 1rem;
+        overflow: scroll;
+    }
+
+
+    .modal-title h2 {
+        font-size: 2rem;
+    }
+
+    .modal-title::after {
+        height: 1px;
+        width: 10rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        content: "";
+        display: inline-block;
+        clear: both;
+    }
+
+    .modal-body {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .modal-img {
+
+        border-radius: 20px;
+        margin: 1rem;
+    }
+
+    .close-button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        font-size: 2rem;
+        padding-left: 1rem;
+
+    }
+    .modal-text {
+        font-size: 0.75rem;
+        margin-bottom: 2rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        padding-top: 0.5rem;
+        letter-spacing: 0.1rem;
+        max-width: 45%;
+
+        overflow: scroll; /* Скролл при большом объеме текста */
+        overflow-style: marquee-block;
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none; /* Для Internet Explorer */
+    }
+    .modal-text-sepira {
+        max-height: 100vh;
+    }
+    .modal-text-notinsta {
+        max-height: 68vh;
+    }
+
+    .modal-text::-webkit-scrollbar {
+        display: none; /* Для Chrome, Safari и Edge */
+    }
+
 
     .fun_list {
         position: relative;
