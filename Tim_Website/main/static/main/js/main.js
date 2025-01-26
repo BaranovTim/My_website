@@ -1,3 +1,41 @@
+const hamburger = document.querySelector('.hamburger');
+const navBar = document.querySelector('.nav-bar');
+const navLinks = document.querySelectorAll('.nav-bar ul li a'); // Выбираем все ссылки в меню
+
+// Открытие/закрытие меню при клике на гамбургер
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navBar.classList.toggle('active');
+});
+
+// Закрытие меню при прокрутке страницы
+window.addEventListener('scroll', () => {
+    if (navBar.classList.contains('active')) {
+        navBar.classList.remove('active');
+        hamburger.classList.remove('open');
+    }
+});
+
+// Закрытие меню при клике на ссылку (li > a)
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        navBar.classList.remove('active'); // Закрываем меню
+        hamburger.classList.remove('open'); // Возвращаем линии гамбургера
+    });
+});
+
+// Закрытие меню при клике вне гамбургера и меню
+document.addEventListener('click', (event) => {
+    if (
+        !hamburger.contains(event.target) && // Если клик не по гамбургеру
+        !navBar.contains(event.target)       // И не по меню
+    ) {
+        navBar.classList.remove('active');
+        hamburger.classList.remove('open');
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const progressBars = document.querySelectorAll('.progress-bar');
 
@@ -76,11 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-hamburger = document.querySelector('.hamburger');
-hamburger.onclick = function () {
-    navBar = document.querySelector('.nav-bar');
-    navBar.classList.toggle('active');
-};
 
 // Закрытие меню при нажатии на ссылку
 document.querySelectorAll('.nav-bar a').forEach(link => {
