@@ -97,7 +97,7 @@
 
 
     .text-wrapper h5 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         color: #9b1f1f; /* Красный цвет текста */
@@ -121,7 +121,7 @@
 
     /* Главный заголовок */
     .text-wrapper h1 {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
         line-height: 1.5;
         letter-spacing: 0.1rem;
         color: #d5d5d5;
