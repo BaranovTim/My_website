@@ -1,7 +1,20 @@
 const hamburger = document.querySelector('.hamburger');
 const navBar = document.querySelector('.nav-bar');
-const navLinks = document.querySelectorAll('.nav-bar ul li a'); // Выбираем все ссылки в меню
+const navLinks = document.querySelectorAll('.nav-bar ul li a'); // Все ссылки
 
+navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        // Удаляем класс 'active' со всех ссылок
+        navLinks.forEach((l) => l.classList.remove('active'));
+
+        // Добавляем класс 'active' только на нажатую ссылку
+        event.target.classList.add('active');
+
+        // Закрываем меню
+        navBar.classList.remove('active');
+        hamburger.classList.remove('open');
+    });
+});
 // Открытие/закрытие меню при клике на гамбургер
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');

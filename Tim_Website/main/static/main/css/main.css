@@ -56,8 +56,14 @@ header {
     display: none;
 }
 .nav-bar ul {
-    padding-right: 2rem;
+    display: flex;
+    margin-top: 4rem;
+    margin-right: 1rem;
+    @media (max-width: 993px) {
+        padding-right: 2rem;
+    }
 }
+
 
 .nav-bar ul li a {
     display: block;
