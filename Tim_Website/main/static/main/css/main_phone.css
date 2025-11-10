@@ -449,6 +449,43 @@
         padding: 20px;
     }
 
+    
+    .chess_project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Контейнер занимает всю ширину */
+        max-width: 400px; /* Ограничение ширины для центрации */
+        margin: 20px auto; /* Отступы вокруг */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .chess_project .photo {
+        border-radius: 20px;
+        width: 100%; /* Изображение заполняет контейнер */
+        height: auto; /* Сохраняем пропорции */
+        max-width: 100%; /* Не превышаем ширину контейнера */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+    }
+    .clothing_project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Контейнер занимает всю ширину */
+        max-width: 400px; /* Ограничение ширины для центрации */
+        margin: 20px auto; /* Отступы вокруг */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .clothing_project .photo {
+        border-radius: 20px;
+        width: 100%; /* Изображение заполняет контейнер */
+        height: auto; /* Сохраняем пропорции */
+        max-width: 100%; /* Не превышаем ширину контейнера */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+    }
     .sepira_project {
         display: flex;
         flex-direction: column;

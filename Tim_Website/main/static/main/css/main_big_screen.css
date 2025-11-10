@@ -66,9 +66,9 @@
         left: 0;
         right: 0;
         width: 100%;
-        height: 100%; /* Растягиваем фон на весь экран */
-        z-index: -1; /* Чтобы фон был на заднем плане */
-        object-fit: cover; /* Для заполнения без искажения пропорций */
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
     }
 
 
@@ -77,7 +77,7 @@
         justify-content: start;
         width: 7rem;
         height: 7rem;
-        overflow: hidden; /* Чтобы иконка не выходила за рамки */
+        overflow: hidden;
         margin-top: 2rem;
         margin-left: 0.6rem;
     }
@@ -88,8 +88,8 @@
         max-width: 100%;
         margin-left: 3rem;
         margin-top: 10rem;
-        margin-right: 2rem; /* Добавляем отступ справа */
-        word-wrap: break-word; /* Переносим слова при необходимости */
+        margin-right: 2rem;
+        word-wrap: break-word;
         z-index: 0;
 
     }
@@ -105,7 +105,7 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        color: #9b1f1f; /* Красный цвет текста */
+        color: #9b1f1f;
         position: relative;
         display: inline-block;
         margin-bottom: 2rem;
@@ -124,7 +124,7 @@
         margin-bottom: 0.1rem;
     }
 
-    /* Главный заголовок */
+   
     .text-wrapper h1 {
         font-size: 1.9rem;
         line-height: 1.5;
@@ -132,17 +132,17 @@
         color: #d5d5d5;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
-        max-width: 100%; /* Ограничиваем ширину */
-        word-wrap: break-word; /* Переносим слова, если они не помещаются */
-        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
 
     .scroll_down {
         position: absolute;
         bottom: 3.3rem;
-        left: 50%; /* Центрирование по оси X */
-        transform: translateX(-50%); /* Сдвиг для точного центрирования */
+        left: 50%;
+        transform: translateX(-50%);
 
     }
 
@@ -198,7 +198,7 @@
         content: "";
         display: inline-block;
         clear: both;
-        align-self: center; /* Центрирование по вертикали */
+        align-self: center;
     }
 
 
@@ -231,7 +231,7 @@
         border-radius: 50%;
         width: 150px;
         height: 150px;
-        object-fit: cover; /* Для заполнения без искажения пропорций */
+        object-fit: cover;
 
     }
 
@@ -311,7 +311,7 @@
     .cv_button .cv {
         display: flex;
         border: None;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Размытая тень */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         background-color: #919090;
         color: white;
         cursor: pointer;
@@ -330,7 +330,7 @@
     .cv_button .cv:hover {
         background-color: white;
         color: #0D0A0B;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     }
 
     .progress .progress-bar {
@@ -341,14 +341,14 @@
 
     .education {
         display: flex;
-        flex-direction: column; /* Элементы внутри размещаются вертикально */
-        align-items: center; /* Центрируем содержимое по горизонтали */
-        width: 100%; /* Убедимся, что блок занимает всю ширину */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         padding-bottom: 2rem;
     }
 
     .education .timeline {
-        width: 70%; /* Установите желаемую ширину для .timeline */
+        width: 70%;
         display: flex;
         flex-direction: row;
         gap: 2rem;
@@ -388,10 +388,10 @@
     .education .part_of_timeline {
         margin-bottom: 2rem;
         text-align: left;
-        position: relative; /* Добавляем позиционирование для каждого элемента */
+        position: relative;
     }
     .timeline_left, .timeline_right {
-        flex: 1; /* Обеспечиваем равное распределение ширины */
+        flex: 1;
     }
 
     .education span {
@@ -426,7 +426,7 @@
 
 
 
-    /* works */
+   
     .works {
         background-color: #eaeaea;
     }
@@ -435,8 +435,8 @@
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
         display: flex;
-        align-items: center; /* Центрируем по вертикали */
-        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         padding-top: 5rem;
     }
@@ -474,49 +474,95 @@
     .projects {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
         justify-content: center;
         padding: 20px;
     }
 
-    .sepira_project {
+    .projects > div {
+        text-align: center;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .projects img.photo {
+        border-radius: 15px;
+        width: 100%; 
+        height: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .projects img.photo:hover {
+        transform: scale(1.05);
+    }
+
+    .sepira_project {
+        align-items: center;
         justify-content: center;
-        width: 100%; /* Контейнер занимает всю ширину */
-        max-width: 400px; /* Ограничение ширины для центрации */
-        margin: 20px auto; /* Отступы вокруг */
-        text-align: center; /* Центрируем текст */
+        width: 100%; 
+        margin: 20px auto; 
+        text-align: center; 
     }
 
     .sepira_project .photo {
         border-radius: 20px;
-        width: 100%; /* Изображение заполняет контейнер */
-        height: auto; /* Сохраняем пропорции */
-        max-width: 100%; /* Не превышаем ширину контейнера */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+        width: 100%; 
+        height: auto; 
+        max-width: 100%; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .chess_project {
+        padding-top: 20px;
+        width: 100%; 
+        max-width: 400px; 
+        margin: auto; 
+        text-align: center; 
+    }
+
+    .chess_project .photo {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        max-width: 100%; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+    .clothing_project {
+        padding-top: 20px;
+        width: 100%; 
+        max-width: 400px; 
+        margin: auto; 
+        text-align: center;
+    }
+
+    .clothing_project .photo {
+        border-radius: 10px;
+        width: 100%; 
+        height: auto; 
+        max-width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        margin-top: 0.7rem;
     }
 
     .notinsta_project {
         padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        width: 100%; /* Контейнер занимает всю ширину */
-        max-width: 400px; /* Ограничение ширины для центрации */
-        margin: auto; /* Отступы вокруг */
-        text-align: center; /* Центрируем текст */
-        margin-top: 0;
+        width: 100%; 
+        max-width: 400px; 
+        margin: auto;
+        text-align: center; 
     }
 
     .notinsta_project .photo {
         border-radius: 10px;
-        width: 100%; /* Изображение заполняет контейнер */
-        height: auto; /* Сохраняем пропорции */
-        max-width: 100%; /* Не превышаем ширину контейнера */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+        width: 100%; 
+        height: auto; 
+        max-width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
         margin-top: 0.7rem;
     }
 
@@ -591,10 +637,10 @@
         letter-spacing: 0.1rem;
         max-width: 45%;
 
-        overflow: scroll; /* Скролл при большом объеме текста */
+        overflow: scroll;
         overflow-style: marquee-block;
-        scrollbar-width: none; /* Для Firefox */
-        -ms-overflow-style: none; /* Для Internet Explorer */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     .modal-text-sepira {
         max-height: 100vh;
@@ -604,7 +650,7 @@
     }
 
     .modal-text::-webkit-scrollbar {
-        display: none; /* Для Chrome, Safari и Edge */
+        display: none;
     }
 
 
@@ -617,11 +663,11 @@
     }
 
     .fun_list::before {
-        display: block; /* Изменяем с flex на block для корректного поведения псевдоэлемента */
-        position: absolute; /* Позволяет точно управлять расположением */
-        left: 50%; /* Центрируем по горизонтали */
-        transform: translateX(-50%); /* Смещаем на половину ширины элемента */
-        top: 3rem; /* Добавляем отступ сверху вместо margin-bottom */
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 3rem;
         height: 1px;
         width: 30rem;
         background-color: rgba(0, 0, 0, 0.27);
@@ -682,10 +728,10 @@
 
     .footer {
         position: relative;
-        display: flex; /* Включаем Flexbox */
-        flex-direction: column; /* Располагаем элементы по вертикали */
-        justify-content: center; /* Выравниваем по вертикали */
-        align-items: center; /* Выравниваем по горизонтали */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
         color: #fff;
@@ -698,20 +744,20 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh; /* Растягиваем фон на весь экран */
-        z-index: -1; /* Чтобы фон был на заднем плане */
-        object-fit: cover; /* Для заполнения без искажения пропорций */
+        height: 100vh;
+        z-index: -1;
+        object-fit: cover;
     }
 
     .footer-content {
         max-width: 100%;
         position: absolute;
-        word-wrap: break-word; /* Переносим слова при необходимости */
-        overflow-wrap: break-word; /* Альтернативное свойство для переносов */
-        top: 50%; /* Относительно родителя */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Центрируем по обеим осям */
-        z-index: 1; /* Гарантируем, что текст окажется выше изображения */
+        transform: translate(-50%, -50%);
+        z-index: 1;
         margin-top: -6rem;
     }
 
@@ -758,7 +804,7 @@
     }
 
     .contact-info strong {
-        color: #9b1f1f; /* Красный цвет для заголовков PHONE и EMAIL */
+        color: #9b1f1f;
     }
 
 
@@ -776,7 +822,7 @@
 
     .social-icons a:hover {
         transform: translateY(+20px);
-        color: #9b1f1f; /* Изменение цвета при наведении */
+        color: #9b1f1f;
     }
 
 

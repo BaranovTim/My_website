@@ -481,14 +481,35 @@
         width: 70%;
     }
 
+    
     .projects {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 400;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
         justify-content: center;
         padding: 20px;
+    }
+
+    .projects > div {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects img.photo {
+        border-radius: 15px;
+        width: 100%; 
+        height: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .projects img.photo:hover {
+        transform: scale(1.05);
     }
 
     .sepira_project {
@@ -508,6 +529,38 @@
         height: auto; /* Сохраняем пропорции */
         max-width: 100%; /* Не превышаем ширину контейнера */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для красоты */
+    }
+    
+    .chess_project {
+        padding-top: 20px;
+        width: 100%; 
+        max-width: 400px; 
+        margin: auto; 
+        text-align: center; 
+    }
+
+    .chess_project .photo {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        max-width: 100%; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+    .clothing_project {
+        padding-top: 20px;
+        width: 100%; 
+        max-width: 400px; 
+        margin: auto; 
+        text-align: center;
+    }
+
+    .clothing_project .photo {
+        border-radius: 10px;
+        width: 100%; 
+        height: auto; 
+        max-width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        margin-top: 0.7rem;
     }
 
     .notinsta_project {
