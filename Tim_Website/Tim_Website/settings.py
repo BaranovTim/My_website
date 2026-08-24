@@ -10,22 +10,53 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Repository root (one level above the Django project dir), used for build output.
+REPO_DIR = BASE_DIR.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x=i*kv#y1d2n&mbw%#kl$s*u@do+_3rye^oq=0-hk^!f@au@m_'
+# Set DJANGO_SECRET_KEY in the Vercel project's environment variables.
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-QrZpmLL_KtLt2t_nLMBzgt0TezJkIBBeJLvdpwyMm8zFSC1KEmsHzaf218zOeZDbWbQ',
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'my-website-1-5lec.onrender.com', 'timotheeb.info', 'www.timotheeb.info']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '.vercel.app',
+    'timotheeb.info',
+    'www.timotheeb.info',
+]
+
+# Vercel gives each deployment its own hostname.
+VERCEL_URL = os.environ.get('VERCEL_URL')
+if VERCEL_URL:
+    ALLOWED_HOSTS.append(VERCEL_URL)
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.vercel.app',
+    'https://timotheeb.info',
+    'https://www.timotheeb.info',
+]
+
+# Vercel terminates TLS in front of the app, so cookies can be HTTPS-only.
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -42,6 +73,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,12 +108,8 @@ WSGI_APPLICATION = 'Tim_Website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': 'postgres',
-        'PASSWORD': 'Tim597707',
-        'HOST': 'localhost',
-        'PORT': 5432
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -121,6 +149,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# collectstatic writes here at build time; Vercel serves it as a static asset.
+STATIC_ROOT = REPO_DIR / 'staticfiles_build' / 'static'
+
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+    },
+    # Not the Manifest variant: the bundled lightbox.css points at image files
+    # (../images/close.png etc.) that aren't in the repo, and manifest hashing
+    # treats those dangling references as a hard error.
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Django
+db.sqlite3
+media/
+staticfiles_build/
+
+# Vercel
+.vercel/
+
+# IDE
+.idea/
+.DS_Store
