@@ -37,8 +37,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '.vercel.app',
-    'timotheeb.info',
-    'www.timotheeb.info',
+    'timofeib.info',
+    'www.timofeib.info',
 ]
 
 # Vercel gives each deployment its own hostname.
@@ -48,8 +48,8 @@ if VERCEL_URL:
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.vercel.app',
-    'https://timotheeb.info',
-    'https://www.timotheeb.info',
+    'https://timofeib.info',
+    'https://www.timofeib.info',
 ]
 
 # Vercel terminates TLS in front of the app, so cookies can be HTTPS-only.
