@@ -13,10 +13,11 @@
     <link rel="icon" type="image/png" href="{% static 'main/img/big_logo.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'main/css/css/bootstrap.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/new_sections.css' %}">
 
 
     <title>Timotheeb</title>
@@ -45,6 +46,12 @@
                         </li>
                         <li>
                             <a href="/#works">Works</a>
+                        </li>
+                        <li>
+                            <a href="/#events">Events</a>
+                        </li>
+                        <li>
+                            <a href="/#claude">Claude</a>
                         </li>
 
                         <li>
@@ -136,6 +143,24 @@
                                         <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </li>
+                                <li>
+                                    <strong>Java</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>C</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>TypeScript</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
                             </ul>
 
 
@@ -151,6 +176,18 @@
                                     <strong>Pytorch</strong>
                                     <div class="progress">
                                         <div class="progress-bar appear-animation--short" role="progressbar" style="width: 20%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Node.js</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>React Native (Expo)</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </li>
 
@@ -180,6 +217,24 @@
                                     <strong>Docker</strong>
                                     <div class="progress">
                                         <div class="progress-bar appear-animation--short" role="progressbar" style="width: 30%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Supabase</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Voice AI agents (Twilio, ElevenLabs)</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Claude API & MCP</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </li>
 
@@ -245,9 +300,277 @@
                 <div class="intro_works">
                     <h3>Projects</h3>
                     <h1>Check out my projects.</h1>
-                    <h5>A combination of personal & school projects. (NOT UPDATED YET)<br> Feel free to contact me for any project collaborations.</h5>
+                    <h5>A combination of personal, hackathon & school projects. Newest first.<br> Feel free to contact me for any project collaborations.</h5>
                 </div>
                 <div class="projects">
+                    <!-- ===== New projects (Nov 2026) ===== -->
+                    <div class="project_card dialess_project">
+                        <span class="project-tag project-tag--new">New · Nov 2026</span>
+                        <h3>Dialess</h3>
+                        <p>Type what you need. An AI makes the phone call.</p>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/dialess.jpg' %}" data-modal-target="#modal-dialess" class="photo" alt="Dialess app during a live call" loading="lazy">
+                        </div>
+
+                        <div id="modal-dialess" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>Dialess</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/dialess.jpg' %}" class="photo" alt="Dialess app during a live call">
+                                </div>
+                                <div class="modal-text modal-text-new">
+                                    <h3>Description</h3>
+                                    <p><strong>Dialess</strong> makes phone calls for you. You type what you need, for example "move my dentist visit from Wednesday to Friday afternoon". An AI calls the business in <strong>Lithuanian</strong>, talks to them, and tells you the result.</p>
+
+                                    <p>I built it for people who moved to Lithuania and don't speak the language, and for anyone who hates phone calls. It started at the <strong>Unfair Weekend</strong> AI hackathon in Vilnius (12–15 November 2026). I then entered it in <strong>IceHacks</strong>.</p>
+
+                                    <h2>Key Features:</h2>
+                                    <h3>1. Type it, it calls:</h3>
+                                    <ul>
+                                        <li>Write your request in your own words, or say it.</li>
+                                        <li><strong>Claude</strong> turns it into a short "call card": the goal, the business and your limits.</li>
+                                        <li>Nothing is dialled until you tap <strong>Confirm</strong>.</li>
+                                    </ul>
+
+                                    <h3>2. A live call you can follow:</h3>
+                                    <ul>
+                                        <li>Live transcript in Lithuanian and in your language.</li>
+                                        <li>If the business asks something, Dialess asks you and waits for your answer.</li>
+                                        <li>You can take over the call with your own voice at any time.</li>
+                                        <li>Call up to 3 places at once.</li>
+                                    </ul>
+
+                                    <h3>3. Safety rules in code, not only in prompts:</h3>
+                                    <ul>
+                                        <li>The AI always says it is an AI first.</li>
+                                        <li>It only agrees to times inside your limits. Plain code checks this.</li>
+                                        <li>No payments, card numbers or emergency numbers.</li>
+                                        <li>Calls show your own verified number. No audio is stored.</li>
+                                    </ul>
+
+                                    <h3>4. Apps:</h3>
+                                    <ul>
+                                        <li>iPhone and Android app, plus a website.</li>
+                                        <li>A demo mode plays a full call without dialling anyone.</li>
+                                    </ul>
+
+                                    <h3>Tech Stack:</h3>
+                                    <ul>
+                                        <li><strong>Backend:</strong> TypeScript on Node.js 22, with no runtime dependencies.</li>
+                                        <li><strong>AI and voice:</strong> Claude API, ElevenLabs voice agent, Twilio calls and live transcription.</li>
+                                        <li><strong>Data and sign-in:</strong> Supabase (PostgreSQL).</li>
+                                        <li><strong>App:</strong> React Native with Expo. Deployed on Railway.</li>
+                                    </ul>
+
+                                    <p>The code is private for now. Write to me if you want a demo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project_card balsas_project">
+                        <span class="project-tag">Civic tech · 2026</span>
+                        <h3>Balsas</h3>
+                        <p>What should Vilnius fix first?</p>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/balsas.jpg' %}" data-modal-target="#modal-balsas" class="photo" alt="Balsas app screens: home, city map and problem list" loading="lazy">
+                        </div>
+
+                        <div id="modal-balsas" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>Balsas</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/balsas.jpg' %}" class="photo" alt="Balsas app screens">
+                                </div>
+                                <div class="modal-text modal-text-new">
+                                    <h3>Description</h3>
+                                    <p><strong>Balsas</strong> ("voice" in Lithuanian) answers one question for Vilnius: <strong>what should be fixed first?</strong> Residents take a photo of a problem. Claude fills in the report. Reports from the same spot join into one problem. A public formula ranks every problem, so anyone can see why something is #1.</p>
+
+                                    <h2>Key Features:</h2>
+                                    <h3>1. Photo reports:</h3>
+                                    <ul>
+                                        <li>Claude looks at the photo and fills in the category and the description.</li>
+                                        <li>A photo goes public only when the AI is sure it shows nothing private: no people, number plates or documents.</li>
+                                        <li>Anything unsure waits, blurred, for a moderator.</li>
+                                    </ul>
+
+                                    <h3>2. Real data from day one:</h3>
+                                    <ul>
+                                        <li>Imports the public reports from the city's <strong>Tvarkau miestą</strong> service every hour.</li>
+                                        <li>A news agent reads Lithuanian news sites (LRT, 15min, Delfi and more). Claude picks out articles about real problems at real places.</li>
+                                    </ul>
+
+                                    <h3>3. A ranking you can check:</h3>
+                                    <ul>
+                                        <li>The priority formula is published.</li>
+                                        <li>Every problem has a "Why is this #1?" page.</li>
+                                        <li>Residents can press "This matters to me too".</li>
+                                    </ul>
+
+                                    <h3>4. City map and City Health:</h3>
+                                    <ul>
+                                        <li>A map with layers, districts and problem markers.</li>
+                                        <li>Sensor data adds what residents can't see.</li>
+                                    </ul>
+
+                                    <h3>5. Three languages:</h3>
+                                    <ul>
+                                        <li>Lithuanian, English and Russian. The AI translates new texts in the background.</li>
+                                    </ul>
+
+                                    <h3>Tech Stack:</h3>
+                                    <ul>
+                                        <li><strong>Backend:</strong> Python 3.12, FastAPI, SQLAlchemy 2 (async), Alembic.</li>
+                                        <li><strong>Database:</strong> PostgreSQL 17 with PostGIS for maps.</li>
+                                        <li><strong>AI:</strong> Claude API for photos, news and translations.</li>
+                                        <li><strong>Web app:</strong> Next.js 16 and Tailwind 4. Runs with Docker.</li>
+                                    </ul>
+
+                                    <p>The code can be found here: <a href="https://github.com/BaranovTim/bolsas" target="_blank" rel="noopener">GitHub Repository</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project_card vanth_project">
+                        <span class="project-tag">Quant · ML · 2026</span>
+                        <h3>Vanth (Trading Bot)</h3>
+                        <p>Crypto calls from 5 agents, with an honest record</p>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/vanth.jpg' %}" data-modal-target="#modal-vanth" class="photo" alt="Vanth trading bot" loading="lazy">
+                        </div>
+
+                        <div id="modal-vanth" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>Vanth (Trading Bot)</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/vanth.jpg' %}" class="photo" alt="Vanth trading bot">
+                                </div>
+                                <div class="modal-text modal-text-new">
+                                    <h3>Description</h3>
+                                    <p><strong>Vanth</strong> is a crypto prediction app. For 25 coins it says when to enter, where to place the order, where to take profit and where to put the stop. It never touches your exchange account: you place the trade yourself. It also keeps a public record of how every call really did.</p>
+
+                                    <h2>Key Features:</h2>
+                                    <h3>1. Five agents:</h3>
+                                    <ul>
+                                        <li><strong>Agents 1–4</strong> only measure: chart patterns and smart money, indicators, news, and order flow.</li>
+                                        <li><strong>Agent 5</strong> is the model. It learns which of those signals actually matter.</li>
+                                    </ul>
+
+                                    <h3>2. Three kinds of calls:</h3>
+                                    <ul>
+                                        <li>4-hour calls with a limit order, a target and a stop.</li>
+                                        <li>Daily swing calls with a stop that follows the price.</li>
+                                        <li>A weekly long/short rotation on the most-traded futures.</li>
+                                        <li>A "smart money" check: did top traders on Hyperliquid take the same side?</li>
+                                    </ul>
+
+                                    <h3>3. Tested honestly:</h3>
+                                    <ul>
+                                        <li>Walk-forward tests: the models learn only from the past and are scored on the next 6 months (Sep 2023 – Sep 2026, after fees).</li>
+                                        <li>In these tests, strong 4-hour calls won about 72% of the time.</li>
+                                        <li>Tests are not live results, so the app shows a live record of every call.</li>
+                                        <li>Ideas that didn't help are written down and left out.</li>
+                                    </ul>
+
+                                    <h3>4. App and alerts:</h3>
+                                    <ul>
+                                        <li>Flutter app for Android and iOS.</li>
+                                        <li>Alerts for new calls, filled orders, "take a third off", target and stop.</li>
+                                        <li>599 Python tests and 188 app tests.</li>
+                                    </ul>
+
+                                    <h3>Tech Stack:</h3>
+                                    <ul>
+                                        <li><strong>Models and data:</strong> Python, pandas, NumPy, scikit-learn, LightGBM.</li>
+                                        <li><strong>Server:</strong> Python API in Docker on one small server.</li>
+                                        <li><strong>App:</strong> Flutter (Dart).</li>
+                                    </ul>
+
+                                    <p><em>Not financial advice.</em> The code can be found here: <a href="https://github.com/BaranovTim/CrptBot" target="_blank" rel="noopener">GitHub Repository</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project_card token_project">
+                        <span class="project-tag">Open source · Nov 2026</span>
+                        <h3>My Token Usage</h3>
+                        <p>See your Claude Code tokens and what they would cost</p>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/token-usage.jpg' %}" data-modal-target="#modal-token" class="photo" alt="My Token Usage dashboard with example data" loading="lazy">
+                        </div>
+
+                        <div id="modal-token" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>My Token Usage</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/token-usage.jpg' %}" class="photo" alt="My Token Usage dashboard">
+                                </div>
+                                <div class="modal-text modal-text-new">
+                                    <h3>Description</h3>
+                                    <p><strong>My Token Usage</strong> is a one-page dashboard. It shows how many tokens you use in <strong>Claude Code</strong>, and about how much that would cost at Anthropic's API prices.</p>
+
+                                    <p>Everyone who opens it sees their own numbers. The page reads your Claude Code log files inside your browser. Nothing is uploaded.</p>
+
+                                    <h2>Key Features:</h2>
+                                    <h3>1. Your stats:</h3>
+                                    <ul>
+                                        <li>Lifetime tokens, peak day, longest task and streaks.</li>
+                                        <li>An activity calendar: daily, weekly or running total.</li>
+                                    </ul>
+
+                                    <h3>2. What it would cost:</h3>
+                                    <ul>
+                                        <li>Estimated API cost: all time, this month, last 30 days and per active day.</li>
+                                        <li>Split by project, by model, by day and by kind of token.</li>
+                                    </ul>
+
+                                    <h3>3. Every session:</h3>
+                                    <ul>
+                                        <li>Each Claude Code chat with its title, project, length, prompts, tokens and cost.</li>
+                                        <li>Search and sort.</li>
+                                    </ul>
+
+                                    <h3>4. Private by design:</h3>
+                                    <ul>
+                                        <li>Logs never leave your computer.</li>
+                                        <li>A small Python server updates the page every 5 minutes, only on your own machine.</li>
+                                    </ul>
+
+                                    <h3>Tech Stack:</h3>
+                                    <ul>
+                                        <li>One HTML file with plain JavaScript, no framework.</li>
+                                        <li>Python 3 standard library for the auto-update server.</li>
+                                    </ul>
+
+                                    <p>The code can be found here: <a href="https://github.com/BaranovTim/Claude-Token-Usage" target="_blank" rel="noopener">GitHub Repository</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===== End of new projects ===== -->
+
                     <div class="sepira_project">
                         <h3>Sepira</h3>
                         <p>Warehouse Stock Tracker <br> (QR scanner included)</p>
@@ -592,7 +915,7 @@
                     <span>Cups of Coffee</span>
                 </li>
                 <li class="fun_special">
-                    <h1 class="fun_num" data-target="7">0</h1>
+                    <h1 class="fun_num" data-target="11">0</h1>
                     <span>Projects Completed</span>
                 </li>
 
@@ -606,6 +929,217 @@
         </section>
 
 
+
+        <!-- ===== Events ===== -->
+        <section id="events" class="section events-section">
+            <div class="events">
+                <div class="events-intro">
+                    <h3>Events</h3>
+                    <h1>Where I build.</h1>
+                    <h5>Hackathons I took part in.</h5>
+                </div>
+
+                <div class="events-list">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">12–15</span>
+                            <span class="event-month">Nov 2026</span>
+                        </div>
+                        <div class="event-body">
+                            <div class="event-meta">
+                                <span class="event-pill">In person</span>
+                                <span><i class="fa fa-location-dot"></i> ISM University, Vilnius</span>
+                            </div>
+                            <h2>Unfair Weekend</h2>
+                            <p>A 4-day AI hackathon in Vilnius for young builders and future founders. I built <strong>Dialess</strong> there: you type a request, and an AI makes the phone call in Lithuanian.</p>
+                            <button type="button" class="event-link" data-modal-target="#modal-dialess">See the project <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">8–15</span>
+                            <span class="event-month">Nov 2026</span>
+                        </div>
+                        <div class="event-body">
+                            <div class="event-meta">
+                                <span class="event-pill">Online</span>
+                                <span><i class="fa fa-globe"></i> Devpost</span>
+                            </div>
+                            <h2>IceHacks</h2>
+                            <p>An online hackathon on Devpost. Every project had to be built during the event week. I entered <strong>Dialess</strong>.</p>
+                            <button type="button" class="event-link" data-modal-target="#modal-dialess">See the project <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Claude certificates + road to Anthropic ===== -->
+        <section id="claude" class="section claude-section">
+            <div class="claude-wrap">
+                <div class="claude-hero">
+                    <p class="claude-eyebrow">Claude Academy &middot; Certificates</p>
+                    <h1 class="claude-title">Meet Timofei, <em>November&nbsp;2026.</em></h1>
+                    <p class="claude-lede">Now trained on Claude Code, the Model Context Protocol, AI Fluency, agent skills and subagents.</p>
+                    <ul class="claude-stats">
+                        <li><b>5</b><span>courses completed</span></li>
+                        <li><b>3</b><span>verified badges</span></li>
+                        <li><b>2026</b><span>Oct–Nov</span></li>
+                    </ul>
+                </div>
+
+                <div class="claude-grid">
+                    <figure class="badge-card">
+                        <a href="https://academy.claude.com/verify/bbc22e2b01bc28a87c2d33e3c2cab68e" target="_blank" rel="noopener" class="badge-img">
+                            <img src="{% static 'main/img/badge-claude-code-in-action.png' %}" alt="Course completion badge: Claude Code in action, presented to Timofei Baranov" loading="lazy">
+                        </a>
+                        <figcaption>
+                            <h4>Claude Code in action</h4>
+                            <p>Issued 3 Oct 2026</p>
+                            <a href="https://academy.claude.com/verify/bbc22e2b01bc28a87c2d33e3c2cab68e" target="_blank" rel="noopener">Verify <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="badge-card">
+                        <a href="https://academy.claude.com/verify/379b86fe803b5438bf28613043e58b8a" target="_blank" rel="noopener" class="badge-img">
+                            <img src="{% static 'main/img/badge-intro-to-mcp.png' %}" alt="Course completion badge: Introduction to Model Context Protocol, presented to Timofei Baranov" loading="lazy">
+                        </a>
+                        <figcaption>
+                            <h4>Introduction to Model Context Protocol</h4>
+                            <p>Issued 3 Oct 2026</p>
+                            <a href="https://academy.claude.com/verify/379b86fe803b5438bf28613043e58b8a" target="_blank" rel="noopener">Verify <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="badge-card">
+                        <a href="https://academy.claude.com/verify/d3e26c4be8cf04ff9c988749860010cf" target="_blank" rel="noopener" class="badge-img">
+                            <img src="{% static 'main/img/badge-ai-fluency.png' %}" alt="Course completion badge: AI Fluency, Framework and foundations, presented to Timofei Baranov" loading="lazy">
+                        </a>
+                        <figcaption>
+                            <h4>AI Fluency: Framework and foundations</h4>
+                            <p>Issued 29 Oct 2026</p>
+                            <a href="https://academy.claude.com/verify/d3e26c4be8cf04ff9c988749860010cf" target="_blank" rel="noopener">Verify <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+
+                    <div class="course-card course-card--sage">
+                        <div class="course-shape">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="27" r="5"/><path d="M19 16v3M19 35v3M8 27h3M27 27h3M11.2 19.2l2.1 2.1M24.7 32.7l2.1 2.1M11.2 34.8l2.1-2.1M24.7 21.3l2.1-2.1"/><circle cx="34" cy="14" r="3" fill="#629987"/><path d="M34 7.5v2M34 18.5v2M27.5 14h2M38.5 14h2"/></g></svg>
+                        </div>
+                        <div>
+                            <h4>Introduction to agent skills</h4>
+                            <p>Course &middot; 6 lessons</p>
+                            <span class="course-done"><i class="fas fa-check"></i> Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card course-card--lilac">
+                        <div class="course-shape">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="10" r="4" fill="#8f86b8"/><path d="M24 14v10M24 24l-10 8M24 24l10 8M24 24v10"/><circle cx="14" cy="35" r="3"/><circle cx="34" cy="35" r="3"/><circle cx="24" cy="37" r="3"/></g></svg>
+                        </div>
+                        <div>
+                            <h4>Introduction to subagents</h4>
+                            <p>Course &middot; 4 lessons</p>
+                            <span class="course-done"><i class="fas fa-check"></i> Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracker" id="mle-tracker">
+                    <div class="tracker-head">
+                        <div>
+                            <p class="claude-eyebrow">Progress tracker</p>
+                            <h2 class="claude-h2">How far am I from<br>MLE at Anthropic?</h2>
+                        </div>
+                        <p class="tracker-intro">An honest estimate. Anthropic's ML engineer posts ask for years of strong software work, real machine-learning depth and at least a Bachelor's degree (or the same level of experience). I'm in my first year at Vilnius Tech.</p>
+                    </div>
+
+                    <div class="tracker-meter">
+                        <div class="tracker-number"><span class="tracker-percent">0</span><span class="tracker-sign">%</span></div>
+                        <div class="tracker-track">
+                            <div class="tracker-bar"><div class="tracker-fill"></div></div>
+                            <div class="tracker-axis">
+                                <span>Today &middot; Nov 2026</span>
+                                <span>Degree &middot; 2030</span>
+                                <span>Apply &middot; 2031+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit data-progress (0-100) as things change. The big number is worked out from these. -->
+                    <ol class="milestones">
+                        <li class="ms" data-weight="6" data-progress="100">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Python, SQL &amp; backend</h4><p>Django, FastAPI, PostgreSQL, REST APIs, Git.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="2" data-progress="100">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Fluent with Claude tools</h4><p>5 Claude Academy courses.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="7" data-progress="80">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Ship real AI products</h4><p>Dialess, Balsas, Vanth. Next step: real users.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="8" data-progress="35">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>ML fundamentals</h4><p>PyTorch, CNNs, my Fashion-MNIST pooling paper.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="8" data-progress="20">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Research papers</h4><p>Pooling paper written. Next: a paper for a top venue.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="8" data-progress="15">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>University math</h4><p>Linear algebra, probability, calculus, optimisation.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="14" data-progress="5">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Deep learning at scale</h4><p>Transformers from scratch, GPUs, distributed training, RL.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="10" data-progress="5">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Strong internships</h4><p>Summer 2027 search has started.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="8" data-progress="5">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Bachelor's degree</h4><p>Vilnius Tech, year 1 of 4.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="6" data-progress="0">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Open-source ML work</h4><p>Merged code in real ML or AI-safety tools.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="8" data-progress="0">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Anthropic Fellows Program</h4><p>4 months of full-time AI safety research with Anthropic mentors.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                        <li class="ms" data-weight="15" data-progress="0">
+                            <span class="ms-dot"></span>
+                            <div class="ms-text"><h4>Years of engineering experience</h4><p>Most MLE posts ask for 3+ years.</p></div>
+                            <div class="ms-bar"><i></i></div>
+                        </li>
+                    </ol>
+
+                    <div class="tracker-legend">
+                        <span><i class="ms-dot ms-dot--done"></i> Done</span>
+                        <span><i class="ms-dot ms-dot--active"></i> In progress</span>
+                        <span><i class="ms-dot ms-dot--todo"></i> Not started</span>
+                    </div>
+                    <p class="tracker-note">Each step has a weight, and the big number adds them up. The weights are my own guess, based on Anthropic's public <a href="https://www.anthropic.com/careers" target="_blank" rel="noopener">job posts</a> for ML engineers and the Anthropic Fellows Program (checked November 2026).</p>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="section">
             <footer class="footer">

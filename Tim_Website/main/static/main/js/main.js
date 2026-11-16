@@ -207,3 +207,61 @@ function closeModal(modal) {
   overlay.classList.remove('active-overlay');
   console.log('Modal closed:', modal); // Диагностика
 }
+
+
+// ===== MLE @ Anthropic tracker =====
+// The big number is the weighted sum of the milestones' data-progress values.
+// To update the tracker, change data-progress (0-100) on a milestone in index.html.
+(function () {
+    const tracker = document.getElementById('mle-tracker');
+    if (!tracker) return;
+
+    const items = Array.from(tracker.querySelectorAll('.ms'));
+    let totalWeight = 0;
+    let done = 0;
+
+    items.forEach(item => {
+        const weight = parseFloat(item.dataset.weight) || 0;
+        const progress = Math.max(0, Math.min(100, parseFloat(item.dataset.progress) || 0));
+        totalWeight += weight;
+        done += weight * progress / 100;
+
+        item.classList.add(progress >= 100 ? 'is-done' : progress > 0 ? 'is-active' : 'is-todo');
+        const bar = item.querySelector('.ms-bar');
+        if (bar) bar.dataset.pct = progress + '%';
+    });
+
+    const percent = totalWeight ? Math.round(done / totalWeight * 100) : 0;
+    const numberEl = tracker.querySelector('.tracker-percent');
+    const fillEl = tracker.querySelector('.tracker-fill');
+
+    const run = () => {
+        if (fillEl) fillEl.style.width = percent + '%';
+        items.forEach(item => {
+            const fill = item.querySelector('.ms-bar i');
+            if (fill) fill.style.width = Math.min(100, parseFloat(item.dataset.progress) || 0) + '%';
+        });
+        if (!numberEl) return;
+        const start = performance.now();
+        const duration = 1600;
+        const step = now => {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            numberEl.textContent = Math.round(percent * eased);
+            if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+
+    if ('IntersectionObserver' in window) {
+        const watcher = new IntersectionObserver(entries => {
+            if (entries.some(e => e.isIntersecting)) {
+                run();
+                watcher.disconnect();
+            }
+        }, { threshold: 0.25 });
+        watcher.observe(tracker);
+    } else {
+        run();
+    }
+})();
