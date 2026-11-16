@@ -205,6 +205,8 @@ function closeModal(modal) {
   modal.classList.add('modal')
   modal.classList.remove('active-modal');
   overlay.classList.remove('active-overlay');
+  // stop any demo video when its pop-up closes
+  modal.querySelectorAll('video').forEach(video => video.pause());
   console.log('Modal closed:', modal); // Диагностика
 }
 

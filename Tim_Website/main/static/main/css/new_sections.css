@@ -215,6 +215,48 @@
     max-height: 68vh;
 }
 
+/* ---------- Dialess pop-up: demo video ---------- */
+.modal-img--video {
+    flex: 1 1 52%;
+    min-width: 0;
+    align-self: flex-start;
+}
+
+.modal-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    background: #000;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+.modal-video-caption {
+    margin: .6rem 0 0;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
+
+/* Tablets and phones: video on top, text below */
+@media (max-width: 993px) {
+    .modal-body--video {
+        flex-direction: column;
+    }
+
+    .modal-body--video .modal-img--video {
+        display: block !important;
+        flex: 0 0 auto;
+        align-self: stretch;
+        margin: 0 0 1rem;
+    }
+
+    .modal-body--video .modal-text {
+        max-width: 100%;
+    }
+}
+
 .modal-text-new em {
     color: #9b1f1f;
     font-style: normal;

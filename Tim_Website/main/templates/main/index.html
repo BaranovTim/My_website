@@ -309,9 +309,13 @@
                             <div class="modal-title">
                                 <h2>Dialess</h2>
                             </div>
-                            <div class="modal-body">
-                                <div class="modal-img">
-                                    <img src="{% static 'main/img/dialess.jpg' %}" class="photo" alt="Dialess app during a live call">
+                            <div class="modal-body modal-body--video">
+                                <div class="modal-img modal-img--video">
+                                    <video class="modal-video" controls playsinline preload="none" poster="{% static 'main/img/dialess-demo-poster.jpg' %}">
+                                        <source src="{% static 'main/files/dialess-demo.mp4' %}" type="video/mp4">
+                                        Your browser can't play this video.
+                                    </video>
+                                    <p class="modal-video-caption">Demo: Dialess moves a dentist visit, start to finish (44 s)</p>
                                 </div>
                                 <div class="modal-text modal-text-new">
                                     <h3>Description</h3>
