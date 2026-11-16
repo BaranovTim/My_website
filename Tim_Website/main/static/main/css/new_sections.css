@@ -25,6 +25,62 @@
     vertical-align: 2px;
 }
 
+.skill-soon {
+    background: transparent;
+    border: 1px dashed #919090;
+    color: #6f6e6e;
+}
+
+/* ---------- Skills: "Others" group sits under the "Hello There!" text ---------- */
+.skills_others {
+    margin-top: 2.5rem;
+}
+
+.skills_others h4 {
+    padding-left: 0 !important;
+}
+
+.skills_others ul {
+    padding-left: 0;
+}
+
+.skills_others li {
+    padding-right: 0 !important;
+}
+
+/* On tablets and phones the columns stack, so show "Others" after the main list */
+@media (max-width: 993px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills_text {
+        display: contents;
+    }
+
+    .skills_div {
+        order: 1;
+    }
+
+    .skills_others {
+        order: 2;
+        margin-top: 0;
+    }
+
+    .skills_others h4 {
+        padding-left: 6% !important;
+    }
+
+    .skills_others ul {
+        padding-left: 2rem;
+    }
+
+    .skills_others li {
+        padding-right: 6% !important;
+    }
+}
+
 /* ---------- New project cards ---------- */
 .projects .project_card {
     width: 100%;
@@ -42,6 +98,7 @@
 
 .projects .project_card .shown-pop-up {
     width: 100%;
+    margin-top: auto;
 }
 
 .projects .project_card img.photo {
@@ -69,6 +126,30 @@
     border-color: #9b1f1f;
     background: #9b1f1f;
     color: #fff;
+}
+
+.project-tag i {
+    margin-right: 4px;
+    color: #f3c969;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 4px;
+    color: #9b1f1f;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(155, 31, 31, .35);
+}
+
+.project-link i {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.project-link:hover {
+    color: #0D0A0B;
+    border-color: #0D0A0B;
 }
 
 .modal-text-new {
@@ -220,7 +301,30 @@
     letter-spacing: .06em;
 }
 
+.event-result {
+    display: inline-block;
+    margin: 0 0 .9rem !important;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: rgba(243, 201, 105, .12);
+    border: 1px solid rgba(243, 201, 105, .45);
+    color: #f3d68f !important;
+    font-size: 13px !important;
+    font-weight: 500;
+}
+
+.event-result i {
+    margin-right: 6px;
+}
+
+.event-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
 .event-link {
+    text-decoration: none;
     padding: 0;
     border: none;
     background: none;
@@ -816,4 +920,9 @@
         grid-template-columns: 16px 1fr 64px;
         gap: 12px;
     }
+}
+
+.event-link:hover,
+.event-link:focus {
+    color: #fff;
 }
