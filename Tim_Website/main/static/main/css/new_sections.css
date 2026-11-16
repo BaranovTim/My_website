@@ -36,6 +36,65 @@
     margin-top: 2.5rem;
 }
 
+/* Desktop: push "Others" down so it ends on the same line as "Frameworks" */
+@media (min-width: 994px) {
+    .skills {
+        align-items: stretch;
+    }
+
+    .skills_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills_others {
+        margin-top: auto;
+        padding-top: 2.5rem;
+    }
+
+    /* if the left column is ever the taller one, the right list moves down instead */
+    .skills_div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills_div .appear {
+        margin-top: auto;
+    }
+}
+
+/* ---------- Projects: Clothing Recognition + Chess Board Detector stacked next to Sepira ---------- */
+.projects-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.projects-stack .clothing_project {
+    order: 1;
+}
+
+.projects-stack .chess_project {
+    order: 2;
+}
+
+@media (min-width: 769px) {
+    .projects > .projects-stack {
+        justify-content: space-between;
+        gap: 40px;
+        margin: 20px 0;
+    }
+
+    .projects-stack .clothing_project,
+    .projects-stack .chess_project {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+}
+
 .skills_others h4 {
     padding-left: 0 !important;
 }
