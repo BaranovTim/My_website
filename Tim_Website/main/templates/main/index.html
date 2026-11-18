@@ -99,54 +99,6 @@
                                 <br>
                             I am opened to any job opportunities.If you would like me to be part of your team, feel free to email me at <br><a href="mailto:timofeib11@gmail.com">timofeib11@gmail.com</a>
                         </h2>
-                        <div class="skills_others">
-                            <h4>Others</h4>
-                                <ul>
-                                    <li>
-                                        <strong>Restful APIs</strong>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>Git</strong>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>PostgreSQL</strong>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>Docker</strong>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 30%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>Supabase</strong> <span class="skill-new">new</span>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>Voice AI agents (Twilio, ElevenLabs)</strong> <span class="skill-new">new</span>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>Claude API & MCP</strong> <span class="skill-new">new</span>
-                                        <div class="progress">
-                                            <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                        </div>
                     </div>
                     <div class="skills_div">
                             <h1>Some of my skills:</h1>
@@ -230,6 +182,55 @@
                             </ul>
 
                         </div>
+                    </div>
+                    <!-- "Others": in the left column on desktop (CSS grid), after the main list on phones -->
+                    <div class="skills_others">
+                        <h4>Others</h4>
+                            <ul>
+                                <li>
+                                    <strong>Restful APIs</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Git</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>PostgreSQL</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Docker</strong>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 30%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Supabase</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Voice AI agents (Twilio, ElevenLabs)</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Claude API & MCP</strong> <span class="skill-new">new</span>
+                                    <div class="progress">
+                                        <div class="progress-bar appear-animation--short" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+
+                            </ul>
                     </div>
                 </div>
 
@@ -638,88 +639,8 @@
                         </div>
                     </div>
 
-                    <!-- Clothing Recognition + Chess Board Detector share the column next to Sepira (Clothing shows on top via CSS order) -->
+                    <!-- Clothing Recognition + Chess Board Detector share the column next to Sepira -->
                     <div class="projects-stack">
-                    <div class="chess_project">
-                        <h3>Chess Board Detector</h3>
-                        <p>Chess Board Detector</p>
-                        <div class="shown-pop-up">
-                            <img src="{% static 'main/img/ChessBoard-Detector-Example.png' %}" data-modal-target="#modal-chess" class="photo chess-photo">
-                        </div>
-
-                        <div id="modal-chess" class="modal">
-                            <div class="close-button-div">
-                                <button data-close-button class="close-button">&times;</button>
-                            </div>
-                            <div class="modal-title">
-                                <h2>Chess Board Detector</h2>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-img">
-                                    <img src="{% static 'main/img/ChessBoard-Detector-Example.png' %}" class="photo">
-                                </div>
-                                <div class="modal-text modal-text-chess">
-                                    <h3>Description</h3>
-                                    <p><strong>Chess Board and Piece Detection System</strong> is a computer vision project designed to detect and analyze a chessboard using live video from a camera. The system processes frames in real time, identifies the board layout, and provides clear visual feedback including bounding boxes, labels, and coordinate data.</p>
-
-                                    <p>The program is written entirely in <strong>Python</strong> and uses the <strong>OpenCV</strong> library for image capture and processing. It allows users to view a live camera feed, detect the chessboard, and display detailed information such as square positions and grid overlays for analysis or integration into other chess-related applications.</p>
-
-                                    <h2>Key Features:</h2>
-
-                                    <h3>1. Real-Time Processing:</h3>
-                                    <ul>
-                                        <li>Continuously captures frames from the camera feed.</li>
-                                        <li>Processes and analyzes each frame to detect the chessboard in real time.</li>
-                                        <li>Updates visual results dynamically as the camera moves or lighting changes.</li>
-                                    </ul>
-
-                                    <h3>2. Visual Feedback:</h3>
-                                    <ul>
-                                        <li>Displays bounding boxes and labels for detected board areas.</li>
-                                        <li>Shows coordinate information for grid positions.</li>
-                                        <li>Provides a grid overlay to visualize square divisions clearly.</li>
-                                    </ul>
-
-                                    <h3>3. Usage:</h3>
-                                    <ul>
-                                        <li>Run the main file <code>board_finder.py</code> to start full chessboard detection.</li>
-                                        <li>Outputs chessboard bounding box coordinates and the number of detected squares.</li>
-                                        <li>Generates a visual grid representation of the detected board.</li>
-                                    </ul>
-
-                                    <h3>4. Camera Setup and Controls:</h3>
-                                    <ul>
-                                        <li>Uses the default camera (<code>index 0</code>).</li>
-                                        <li>Press <strong>‘q’</strong> to quit the application.</li>
-                                        <li>Processes frames every 10 seconds by default.</li>
-                                    </ul>
-
-                                    <h3>5. Requirements:</h3>
-                                    <ul>
-                                        <li>Install dependencies with <code>pip install -r requirements.txt</code>.</li>
-                                        <li>Ensure the camera is connected and functional.</li>
-                                        <li>Use good lighting and a clearly visible chessboard for optimal results.</li>
-                                    </ul>
-
-                                    <h3>6. Troubleshooting:</h3>
-                                    <ul>
-                                        <li><strong>Camera not opening:</strong> Check that it’s properly connected and not used by another program.</li>
-                                        <li><strong>Poor detection:</strong> Adjust lighting or ensure the chessboard is in the frame and fully visible.</li>
-                                        <li><strong>No board detected:</strong> Adjust parameters in the script to improve detection accuracy.</li>
-                                    </ul>
-
-                                    <h3>7. Future Development:</h3>
-                                    <ul>
-                                        <li>Planned integration with <strong>Meta AI Glasses</strong> for hands-free board tracking.</li>
-                                        <li>Future improvements will include piece detection and automated move recording.</li>
-                                    </ul>
-
-                                    <p>The code can be found here: <a href="https://github.com/BaranovTim/ChessBoard-Detector" target="_blank"><br>GitHub Repository</a>.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                     <div class="clothing_project">
                         <h3>AI Model for Clothing Recognition</h3>
                         <p>Image classification project</p>
@@ -817,6 +738,86 @@
 
                                     <p>The code is available here: <a href="https://github.com/BaranovTim/AI-Model-for-Clothing-Recognition" target="_blank">GitHub Repository</a>.</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chess_project">
+                        <h3>Chess Board Detector</h3>
+                        <p>Chess Board Detector</p>
+                        <div class="shown-pop-up">
+                            <img src="{% static 'main/img/ChessBoard-Detector-Example.png' %}" data-modal-target="#modal-chess" class="photo chess-photo">
+                        </div>
+
+                        <div id="modal-chess" class="modal">
+                            <div class="close-button-div">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-title">
+                                <h2>Chess Board Detector</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-img">
+                                    <img src="{% static 'main/img/ChessBoard-Detector-Example.png' %}" class="photo">
+                                </div>
+                                <div class="modal-text modal-text-chess">
+                                    <h3>Description</h3>
+                                    <p><strong>Chess Board and Piece Detection System</strong> is a computer vision project designed to detect and analyze a chessboard using live video from a camera. The system processes frames in real time, identifies the board layout, and provides clear visual feedback including bounding boxes, labels, and coordinate data.</p>
+
+                                    <p>The program is written entirely in <strong>Python</strong> and uses the <strong>OpenCV</strong> library for image capture and processing. It allows users to view a live camera feed, detect the chessboard, and display detailed information such as square positions and grid overlays for analysis or integration into other chess-related applications.</p>
+
+                                    <h2>Key Features:</h2>
+
+                                    <h3>1. Real-Time Processing:</h3>
+                                    <ul>
+                                        <li>Continuously captures frames from the camera feed.</li>
+                                        <li>Processes and analyzes each frame to detect the chessboard in real time.</li>
+                                        <li>Updates visual results dynamically as the camera moves or lighting changes.</li>
+                                    </ul>
+
+                                    <h3>2. Visual Feedback:</h3>
+                                    <ul>
+                                        <li>Displays bounding boxes and labels for detected board areas.</li>
+                                        <li>Shows coordinate information for grid positions.</li>
+                                        <li>Provides a grid overlay to visualize square divisions clearly.</li>
+                                    </ul>
+
+                                    <h3>3. Usage:</h3>
+                                    <ul>
+                                        <li>Run the main file <code>board_finder.py</code> to start full chessboard detection.</li>
+                                        <li>Outputs chessboard bounding box coordinates and the number of detected squares.</li>
+                                        <li>Generates a visual grid representation of the detected board.</li>
+                                    </ul>
+
+                                    <h3>4. Camera Setup and Controls:</h3>
+                                    <ul>
+                                        <li>Uses the default camera (<code>index 0</code>).</li>
+                                        <li>Press <strong>‘q’</strong> to quit the application.</li>
+                                        <li>Processes frames every 10 seconds by default.</li>
+                                    </ul>
+
+                                    <h3>5. Requirements:</h3>
+                                    <ul>
+                                        <li>Install dependencies with <code>pip install -r requirements.txt</code>.</li>
+                                        <li>Ensure the camera is connected and functional.</li>
+                                        <li>Use good lighting and a clearly visible chessboard for optimal results.</li>
+                                    </ul>
+
+                                    <h3>6. Troubleshooting:</h3>
+                                    <ul>
+                                        <li><strong>Camera not opening:</strong> Check that it’s properly connected and not used by another program.</li>
+                                        <li><strong>Poor detection:</strong> Adjust lighting or ensure the chessboard is in the frame and fully visible.</li>
+                                        <li><strong>No board detected:</strong> Adjust parameters in the script to improve detection accuracy.</li>
+                                    </ul>
+
+                                    <h3>7. Future Development:</h3>
+                                    <ul>
+                                        <li>Planned integration with <strong>Meta AI Glasses</strong> for hands-free board tracking.</li>
+                                        <li>Future improvements will include piece detection and automated move recording.</li>
+                                    </ul>
+
+                                    <p>The code can be found here: <a href="https://github.com/BaranovTim/ChessBoard-Detector" target="_blank"><br>GitHub Repository</a>.</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>

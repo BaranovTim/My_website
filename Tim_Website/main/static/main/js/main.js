@@ -50,19 +50,24 @@ document.addEventListener('click', (event) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const progressBars = document.querySelectorAll('.progress-bar');
+    // Watch the grey track, not the bar itself. The bar starts moved fully
+    // out of its track (translateX(-100%)), and Safari on iPhone does not count
+    // that hidden bar as "on screen", so it never appeared there.
+    const progressTracks = document.querySelectorAll('.progress');
 
     const observer_bars = new IntersectionObserver(entries => {
         entries.forEach(entry => {
+            const bar = entry.target.querySelector('.progress-bar');
+            if (!bar) return;
             if (entry.isIntersecting) {
-                entry.target.classList.add('appear-animation--short');
+                bar.classList.add('appear-animation--short');
             } else {
-                entry.target.classList.remove('appear-animation--short');
+                bar.classList.remove('appear-animation--short');
             }
         });
     });
 
-    progressBars.forEach(bar => observer_bars.observe(bar));
+    progressTracks.forEach(track => observer_bars.observe(track));
 
     const appear = document.querySelector('.appear');
 

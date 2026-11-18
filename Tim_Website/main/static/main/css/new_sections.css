@@ -31,35 +31,57 @@
     color: #6f6e6e;
 }
 
-/* ---------- Skills: "Others" group sits under the "Hello There!" text ---------- */
-.skills_others {
-    margin-top: 2.5rem;
-}
-
-/* Desktop: push "Others" down so it ends on the same line as "Frameworks" */
+/* ---------- Skills: "Others" group ----------
+   In the HTML, "Others" comes after the main skills list, so phones and
+   tablets show it last with no tricks. On desktop a CSS grid moves it to the
+   left column, under "Hello There!", and lines its end up with "Frameworks".
+   (No display: contents or order here: iPhone Safari has bugs with both.) */
 @media (min-width: 994px) {
     .skills {
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: calc(40% + 11.5rem) minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        align-items: start;
     }
 
     .skills_text {
-        display: flex;
-        flex-direction: column;
+        grid-column: 1;
+        grid-row: 1;
+        max-width: none;
     }
 
     .skills_others {
-        margin-top: auto;
-        padding-top: 2.5rem;
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        margin: 2.5rem 1.5rem 0 10rem;
+        text-align: left;
     }
 
-    /* if the left column is ever the taller one, the right list moves down instead */
     .skills_div {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-self: stretch;
+        width: auto;
         display: flex;
         flex-direction: column;
     }
 
+    /* if the left column is ever the taller one, the right list moves down instead */
     .skills_div .appear {
         margin-top: auto;
+    }
+
+    .skills_others h4 {
+        padding-left: 0;
+    }
+
+    .skills_others ul {
+        padding-left: 0;
+    }
+
+    .skills_others li {
+        padding-right: 0;
     }
 }
 
@@ -69,14 +91,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-
-.projects-stack .clothing_project {
-    order: 1;
-}
-
-.projects-stack .chess_project {
-    order: 2;
 }
 
 @media (min-width: 769px) {
@@ -92,51 +106,6 @@
         max-width: 460px;
         margin: 0 auto;
         padding-top: 0;
-    }
-}
-
-.skills_others h4 {
-    padding-left: 0 !important;
-}
-
-.skills_others ul {
-    padding-left: 0;
-}
-
-.skills_others li {
-    padding-right: 0 !important;
-}
-
-/* On tablets and phones the columns stack, so show "Others" after the main list */
-@media (max-width: 993px) {
-    .skills {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .skills_text {
-        display: contents;
-    }
-
-    .skills_div {
-        order: 1;
-    }
-
-    .skills_others {
-        order: 2;
-        margin-top: 0;
-    }
-
-    .skills_others h4 {
-        padding-left: 6% !important;
-    }
-
-    .skills_others ul {
-        padding-left: 2rem;
-    }
-
-    .skills_others li {
-        padding-right: 6% !important;
     }
 }
 
